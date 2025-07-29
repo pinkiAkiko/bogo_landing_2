@@ -761,4 +761,6 @@ export default function BogoNinjaLanding() {
       </footer>
     </div>
   )
+  
 }
+   
