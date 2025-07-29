@@ -509,7 +509,7 @@ export default function BogoNinjaLanding() {
       </section>
 
       {/* Restaurant Partner Section */}
-      <section id="partners" className="py-16 bg-bogo-dark-600 text-white">
+      <section id="partners" className="py-16 bg-bogo-gradient-6 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Are You a Restaurant? Let's Grow Together.</h2>
