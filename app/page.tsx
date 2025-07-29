@@ -43,16 +43,16 @@ export default function BogoNinjaLanding() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-green-50">
+    <div className="min-h-screen bg-gradient-to-br from-bogo-orange-50 to-bogo-dark-50">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-orange-100 z-50">
+      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-bogo-orange-100 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-green-500 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-bogo-orange-500 to-bogo-dark-500 rounded-lg flex items-center justify-center">
                 <Utensils className="w-6 h-6 text-white" />
               </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-green-600 bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-gradient-to-r from-bogo-orange-600 to-bogo-dark-600 bg-clip-text text-transparent">
                 Bogo Ninja
               </span>
             </div>
@@ -61,25 +61,25 @@ export default function BogoNinjaLanding() {
             <div className="hidden md:flex items-center space-x-8">
               <button
                 onClick={() => scrollToSection("deals")}
-                className="text-gray-700 hover:text-orange-600 transition-colors"
+                className="text-gray-700 hover:text-bogo-orange-600 transition-colors"
               >
                 Top Deals
               </button>
               <button
                 onClick={() => scrollToSection("how-it-works")}
-                className="text-gray-700 hover:text-orange-600 transition-colors"
+                className="text-gray-700 hover:text-bogo-orange-600 transition-colors"
               >
                 How It Works
               </button>
               <button
                 onClick={() => scrollToSection("partners")}
-                className="text-gray-700 hover:text-orange-600 transition-colors"
+                className="text-gray-700 hover:text-bogo-orange-600 transition-colors"
               >
                 For Restaurants
               </button>
               <Button
                 onClick={() => scrollToSection("download")}
-                className="bg-gradient-to-r from-orange-500 to-green-500 hover:from-orange-600 hover:to-green-600"
+                className="bg-gradient-to-r from-bogo-orange-500 to-bogo-dark-500 hover:from-bogo-orange-600 hover:to-bogo-dark-600"
               >
                 Download App
               </Button>
@@ -93,29 +93,29 @@ export default function BogoNinjaLanding() {
 
           {/* Mobile Menu */}
           {mobileMenuOpen && (
-            <div className="md:hidden mt-4 pb-4 border-t border-orange-100">
+            <div className="md:hidden mt-4 pb-4 border-t border-bogo-orange-100">
               <div className="flex flex-col space-y-4 pt-4">
                 <button
                   onClick={() => scrollToSection("deals")}
-                  className="text-left text-gray-700 hover:text-orange-600"
+                  className="text-left text-gray-700 hover:text-bogo-orange-600"
                 >
                   Top Deals
                 </button>
                 <button
                   onClick={() => scrollToSection("how-it-works")}
-                  className="text-left text-gray-700 hover:text-orange-600"
+                  className="text-left text-gray-700 hover:text-bogo-orange-600"
                 >
                   How It Works
                 </button>
                 <button
                   onClick={() => scrollToSection("partners")}
-                  className="text-left text-gray-700 hover:text-orange-600"
+                  className="text-left text-gray-700 hover:text-bogo-orange-600"
                 >
                   For Restaurants
                 </button>
                 <Button
                   onClick={() => scrollToSection("download")}
-                  className="bg-gradient-to-r from-orange-500 to-green-500 w-full"
+                  className="bg-gradient-to-r from-bogo-orange-500 to-bogo-dark-500 w-full"
                 >
                   Download App
                 </Button>
@@ -133,7 +133,7 @@ export default function BogoNinjaLanding() {
               <div className="space-y-4">
                 <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
                   Grab Exciting{" "}
-                  <span className="bg-gradient-to-r from-orange-600 to-green-600 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-bogo-orange-600 to-bogo-dark-600 bg-clip-text text-transparent">
                     Local Deals
                   </span>
                   . Eat More, Pay Less.
@@ -146,7 +146,7 @@ export default function BogoNinjaLanding() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-orange-500 to-green-500 hover:from-orange-600 hover:to-green-600 text-lg px-8 py-6"
+                  className="bg-gradient-to-r from-bogo-orange-500 to-bogo-dark-500 hover:from-bogo-orange-600 hover:to-bogo-dark-600 text-lg px-8 py-6"
                   onClick={() => scrollToSection("deals")}
                 >
                   Browse Top Deals
@@ -155,7 +155,7 @@ export default function BogoNinjaLanding() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-orange-300 text-orange-600 hover:bg-orange-50 text-lg px-8 py-6 bg-transparent"
+                  className="border-bogo-orange-300 text-bogo-orange-600 hover:bg-bogo-orange-50 text-lg px-8 py-6 bg-transparent"
                   onClick={() => scrollToSection("partners")}
                 >
                   I'm a Restaurant
@@ -163,11 +163,11 @@ export default function BogoNinjaLanding() {
               </div>
 
               <div className="flex flex-wrap gap-4">
-                <Badge className="bg-green-100 text-green-800 px-4 py-2 text-sm">
+                <Badge className="bg-bogo-dark-100 text-bogo-dark-800 px-4 py-2 text-sm">
                   <CheckCircle className="w-4 h-4 mr-2" />
                   100% Free for Customers
                 </Badge>
-                <Badge className="bg-orange-100 text-orange-800 px-4 py-2 text-sm">
+                <Badge className="bg-bogo-orange-100 text-bogo-orange-800 px-4 py-2 text-sm">
                   <CheckCircle className="w-4 h-4 mr-2" />
                   No Hidden Charges
                 </Badge>
@@ -188,8 +188,8 @@ export default function BogoNinjaLanding() {
                   className="rounded-2xl shadow-2xl"
                 />
               </div>
-              <div className="absolute -top-4 -right-4 w-32 h-32 bg-gradient-to-r from-orange-400 to-green-400 rounded-full opacity-20 animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-gradient-to-r from-green-400 to-orange-400 rounded-full opacity-20 animate-pulse delay-1000"></div>
+              <div className="absolute -top-4 -right-4 w-32 h-32 bg-gradient-to-r from-bogo-orange-400 to-bogo-dark-400 rounded-full opacity-20 animate-pulse"></div>
+              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-gradient-to-r from-bogo-dark-400 to-bogo-orange-400 rounded-full opacity-20 animate-pulse delay-1000"></div>
             </div>
           </div>
         </div>
@@ -229,7 +229,7 @@ export default function BogoNinjaLanding() {
       </section>
 
       {/* Social Proof Stats */}
-      <section className="py-16 bg-gradient-to-r from-orange-500 to-green-500 text-white">
+      <section className="py-16 bg-gradient-to-r from-bogo-orange-500 to-bogo-dark-500 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Join India's Fastest Growing Dining Deal Network</h2>
@@ -278,28 +278,28 @@ export default function BogoNinjaLanding() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-bogo-orange-500 to-bogo-dark-500 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Download className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-4">Download & Sign Up</h3>
               <p className="text-gray-600">Create your account in seconds and start exploring</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-bogo-orange-500 to-bogo-dark-500 rounded-full flex items-center justify-center mx-auto mb-6">
                 <MapPin className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-4">Find Nearby Deals</h3>
               <p className="text-gray-600">Explore restaurants near you with live offers</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-bogo-orange-500 to-bogo-dark-500 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Smartphone className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-4">Grab a Coupon</h3>
               <p className="text-gray-600">Tap, save, and show at restaurant</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-bogo-orange-500 to-bogo-dark-500 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Utensils className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-4">Redeem & Dine</h3>
@@ -320,14 +320,14 @@ export default function BogoNinjaLanding() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="p-6 hover:shadow-lg transition-shadow">
               <CardContent className="p-0">
-                <DollarSign className="w-12 h-12 text-green-500 mb-4" />
+                <DollarSign className="w-12 h-12 text-bogo-dark-500 mb-4" />
                 <h3 className="text-xl font-semibold mb-3">Save Money Every Meal</h3>
                 <p className="text-gray-600">Big savings with zero cost to you</p>
               </CardContent>
             </Card>
             <Card className="p-6 hover:shadow-lg transition-shadow">
               <CardContent className="p-0">
-                <Smartphone className="w-12 h-12 text-orange-500 mb-4" />
+                <Smartphone className="w-12 h-12 text-bogo-orange-500 mb-4" />
                 <h3 className="text-xl font-semibold mb-3">Seamless App Experience</h3>
                 <p className="text-gray-600">Just tap, grab, and dine</p>
               </CardContent>
@@ -348,7 +348,7 @@ export default function BogoNinjaLanding() {
             </Card>
             <Card className="p-6 hover:shadow-lg transition-shadow">
               <CardContent className="p-0">
-                <CheckCircle className="w-12 h-12 text-green-500 mb-4" />
+                <CheckCircle className="w-12 h-12 text-bogo-dark-500 mb-4" />
                 <h3 className="text-xl font-semibold mb-3">Free Forever</h3>
                 <p className="text-gray-600">No fees, no subscriptions</p>
               </CardContent>
@@ -424,7 +424,7 @@ export default function BogoNinjaLanding() {
                     <MapPin className="w-4 h-4 mr-1" />
                     {deal.location}
                   </div>
-                  <Button className="w-full bg-gradient-to-r from-orange-500 to-green-500 hover:from-orange-600 hover:to-green-600">
+                  <Button className="w-full bg-gradient-to-r from-bogo-orange-500 to-bogo-dark-500 hover:from-bogo-orange-600 hover:to-bogo-dark-600">
                     Grab Now
                   </Button>
                 </CardContent>
@@ -446,7 +446,7 @@ export default function BogoNinjaLanding() {
             <Card className="p-6">
               <CardContent className="p-0">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-orange-400 to-green-400 rounded-full flex items-center justify-center text-white font-semibold mr-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-bogo-orange-400 to-bogo-dark-400 rounded-full flex items-center justify-center text-white font-semibold mr-4">
                     SP
                   </div>
                   <div>
@@ -466,7 +466,7 @@ export default function BogoNinjaLanding() {
             <Card className="p-6">
               <CardContent className="p-0">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-orange-400 rounded-full flex items-center justify-center text-white font-semibold mr-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-bogo-dark-400 to-bogo-orange-400 rounded-full flex items-center justify-center text-white font-semibold mr-4">
                     AM
                   </div>
                   <div>
@@ -486,7 +486,7 @@ export default function BogoNinjaLanding() {
             <Card className="p-6">
               <CardContent className="p-0">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-orange-400 to-green-400 rounded-full flex items-center justify-center text-white font-semibold mr-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-bogo-orange-400 to-bogo-dark-400 rounded-full flex items-center justify-center text-white font-semibold mr-4">
                     AD
                   </div>
                   <div>
@@ -509,7 +509,7 @@ export default function BogoNinjaLanding() {
       </section>
 
       {/* Restaurant Partner Section */}
-      <section id="partners" className="py-16 bg-gradient-to-r from-green-600 to-orange-600 text-white">
+      <section id="partners" className="py-16 bg-gradient-to-r from-bogo-dark-600 to-bogo-orange-600 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Are You a Restaurant? Let's Grow Together.</h2>
@@ -572,7 +572,7 @@ export default function BogoNinjaLanding() {
           </div>
 
           <div className="text-center">
-            <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 text-lg px-8 py-6">
+            <Button size="lg" className="bg-white text-bogo-dark-600 hover:bg-gray-100 text-lg px-8 py-6">
               Become a Partner – Start for Free
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
@@ -594,7 +594,7 @@ export default function BogoNinjaLanding() {
                   <Download className="mr-2 w-5 h-5" />
                   Download on App Store
                 </Button>
-                <Button size="lg" className="bg-green-600 text-white hover:bg-green-700">
+                <Button size="lg" className="bg-bogo-dark-600 text-white hover:bg-bogo-dark-700">
                   <Download className="mr-2 w-5 h-5" />
                   Get it on Google Play
                 </Button>
@@ -605,7 +605,7 @@ export default function BogoNinjaLanding() {
               <p className="text-gray-600 mb-6 text-lg">Join our restaurant partner network and grow your business</p>
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-orange-500 to-green-500 hover:from-orange-600 hover:to-green-600 text-lg px-8 py-6"
+                className="bg-gradient-to-r from-bogo-orange-500 to-bogo-dark-500 hover:from-bogo-orange-600 hover:to-bogo-dark-600 text-lg px-8 py-6"
               >
                 Become a Partner
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -665,7 +665,7 @@ export default function BogoNinjaLanding() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-green-500 rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-gradient-to-r from-bogo-orange-500 to-bogo-dark-500 rounded-lg flex items-center justify-center">
                   <Utensils className="w-5 h-5 text-white" />
                 </div>
                 <span className="text-xl font-bold">Bogo Ninja</span>

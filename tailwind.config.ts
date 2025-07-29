@@ -1,17 +1,14 @@
 import type { Config } from "tailwindcss"
 
-// all in fixtures is set to tailwind v3 as interims solutions
-
 const config: Config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/**/*.{ts,tsx}", // Updated content path
+    "./src/**/*.{ts,tsx}",
     "*.{js,ts,jsx,tsx,mdx}",
   ],
-  prefix: "", // Added prefix
   theme: {
     container: {
       center: true,
@@ -33,12 +30,12 @@ const config: Config = {
           foreground: "hsl(var(--popover-foreground))",
         },
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "#F37F2C", // Orange as primary
+          foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "#10202F", // Dark as secondary
+          foreground: "#FFFFFF",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
@@ -75,19 +72,20 @@ const config: Config = {
         // Custom Bogo Ninja Colors
         bogo: {
           orange: {
-            50: "hsl(25 95% 95%)",
-            100: "hsl(25 95% 90%)",
-            300: "hsl(25 95% 70%)",
-            500: "hsl(25 95% 53%)",
-            600: "hsl(25 95% 45%)",
-            800: "hsl(25 95% 30%)",
+            50: "#FFF3E6",
+            100: "#FFE0BF",
+            300: "#FFB066",
+            500: "#F37F2C", // primary orange
+            600: "#DB6F22",
+            800: "#A94F12",
           },
-          green: {
-            50: "hsl(142 76% 95%)",
-            100: "hsl(142 76% 90%)",
-            500: "hsl(142 76% 36%)",
-            600: "hsl(142 76% 30%)",
-            800: "hsl(142 76% 15%)",
+          dark: {
+            50: "#DDE3E8",
+            100: "#B8C4CD",
+            300: "#5C6B7B",
+            500: "#10202F", // base dark
+            600: "#0D1A27",
+            800: "#09131F",
           },
         },
       },
@@ -98,20 +96,12 @@ const config: Config = {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {
@@ -122,4 +112,5 @@ const config: Config = {
   },
   plugins: [require("tailwindcss-animate")],
 }
+
 export default config
