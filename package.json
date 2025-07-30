@@ -9,6 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emotion/is-prop-valid": "latest",
     "@hookform/resolvers": "^3.9.1",
     "@radix-ui/react-accordion": "latest",
     "@radix-ui/react-alert-dialog": "latest",
@@ -43,7 +44,7 @@
     "cmdk": "latest",
     "date-fns": "4.1.0",
     "embla-carousel-react": "latest",
-    "framer-motion": "^12.23.12",
+    "framer-motion": "latest",
     "geist": "latest",
     "input-otp": "latest",
     "lucide-react": "^0.454.0",
@@ -58,7 +59,7 @@
     "sonner": "latest",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7",
-    "vaul": "^1.1.2",
+    "vaul": "latest",
     "zod": "^3.24.1"
   },
   "devDependencies": {
