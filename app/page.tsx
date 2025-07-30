@@ -30,6 +30,7 @@ import {
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
+import Counter from "../components/counter";
 
 export default function BogoNinjaLanding() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -41,6 +42,7 @@ export default function BogoNinjaLanding() {
     }
     setMobileMenuOpen(false)
   }
+  
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-bogo-orange-50 to-bogo-dark-50">
@@ -49,10 +51,16 @@ export default function BogoNinjaLanding() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-bogo-orange-500 to-bogo-dark-500 rounded-lg flex items-center justify-center">
+              {/* <div className="w-10 h-10 bg-gradient-to-r from-bogo-orange-500 to-bogo-dark-500 rounded-lg flex items-center justify-center">
                 <Utensils className="w-6 h-6 text-white" />
-              </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-bogo-orange-600 to-bogo-dark-600 bg-clip-text text-transparent">
+              </div> */}
+              <Image
+                src="/logo.png"
+                alt="logo"
+                width={40}
+                height={50}
+              />
+              <span className="text-2xl font-bold bg-bogo-gradient-3 bg-clip-text text-transparent">
                 Bogo Ninja
               </span>
             </div>
@@ -129,11 +137,12 @@ export default function BogoNinjaLanding() {
       <section className="pt-24 pb-16 px-4">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
+            {/* Left Content */}
+            <div className="space-y-8 text-center lg:text-left">
               <div className="space-y-4">
                 <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
                   Grab Exciting{" "}
-                  <span className="bg-bogo-gradient bg-clip-text text-transparent">
+                  <span className="bg-bogo-gradient-3 bg-clip-text text-transparent">
                     Local Deals
                   </span>
                   . Eat More, Pay Less.
@@ -143,7 +152,8 @@ export default function BogoNinjaLanding() {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
                 <Button
                   size="lg"
                   className="bg-bogo-gradient-3 hover:from-bogo-orange-600 hover:to-bogo-dark-600 text-lg px-8 py-6"
@@ -162,7 +172,8 @@ export default function BogoNinjaLanding() {
                 </Button>
               </div>
 
-              <div className="flex flex-wrap gap-4">
+              {/* Badges */}
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4">
                 <Badge className="bg-green-100 text-green-800 px-4 py-2 text-sm">
                   <CheckCircle className="w-4 h-4 mr-2" />
                   100% Free for Customers
@@ -178,18 +189,19 @@ export default function BogoNinjaLanding() {
               </div>
             </div>
 
-            <div className="relative">
+            {/* Right Image Section */}
+            <div className="relative flex justify-center lg:justify-end">
               <div className="relative z-10">
                 <Image
-                  src="/placeholder.svg?height=600&width=500"
+                  src="/mobile_mokeup03.png"
                   alt="Happy diners using Bogo Ninja app"
-                  width={500}
-                  height={600}
-                  className="rounded-2xl shadow-2xl"
+                  width={540}
+                  height={520}
+                  className="mt-5"
                 />
               </div>
-              <div className="absolute -top-4 -right-4 w-32 h-32 bg-gradient-to-r from-bogo-orange-400 to-bogo-orange-400 rounded-full opacity-20 animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-gradient-to-r from-bogo-orange-400 to-bogo-orange-500 rounded-full opacity-20 animate-pulse delay-1000"></div>
+              <div className="absolute -top-4 -right-2 w-32 h-32 bg-bogo-gradient-6 rounded-full opacity-20 animate-pulse"></div>
+              <div className="absolute -bottom-4 -left-9 w-24 h-24 bg-bogo-gradient-6 rounded-full opacity-20 animate-pulse delay-1000"></div>
             </div>
           </div>
         </div>
@@ -207,14 +219,14 @@ export default function BogoNinjaLanding() {
             {[1, 2, 3, 4, 5, 6].map((i) => (
               <div
                 key={i}
-                className="flex items-center justify-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                className="flex items-center justify-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors h-[150px]"
               >
                 <Image
-                  src={`/placeholder.svg?height=80&width=120&query=restaurant logo ${i}`}
+                  src={`/restro_logo0${i}.png`}
                   alt={`Restaurant Partner ${i}`}
-                  width={120}
-                  height={80}
-                  className="opacity-70 hover:opacity-100 transition-opacity"
+                  width={140}
+                  height={100}
+                  className="h-full object-contain opacity-100 hover:opacity-100 transition-opacity"
                 />
               </div>
             ))}
@@ -229,44 +241,58 @@ export default function BogoNinjaLanding() {
       </section>
 
       {/* Social Proof Stats */}
-      <section className="py-16 bg-bogo-orange-300 text-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Join India's Fastest Growing Dining Deal Network</h2>
-          </div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="flex justify-center mb-4">
-                <Utensils className="w-12 h-12" />
-              </div>
-              <div className="text-3xl font-bold mb-2">500+</div>
-              <div className="text-lg opacity-90">Restaurants Partnered</div>
-            </div>
-            <div className="text-center">
-              <div className="flex justify-center mb-4">
-                <Users className="w-12 h-12" />
-              </div>
-              <div className="text-3xl font-bold mb-2">50,000+</div>
-              <div className="text-lg opacity-90">Happy Diners</div>
-            </div>
-            <div className="text-center">
-              <div className="flex justify-center mb-4">
-                <MapPin className="w-12 h-12" />
-              </div>
-              <div className="text-3xl font-bold mb-2">20+</div>
-              <div className="text-lg opacity-90">Cities Covered</div>
-            </div>
-            <div className="text-center">
-              <div className="flex justify-center mb-4">
-                <Gift className="w-12 h-12" />
-              </div>
-              <div className="text-3xl font-bold mb-2">10,000+</div>
-              <div className="text-lg opacity-90">Deals Redeemed</div>
-            </div>
-          </div>
+      <section className="py-16 bg-bogo-orange-500 text-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4">
+            Join India's Fastest Growing Dining Deal Network
+          </h2>
         </div>
-      </section>
+
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+  <div className="text-center">
+    <div className="flex justify-center mb-4">
+      <Utensils className="w-12 h-12" />
+    </div>
+    <div className="text-5xl font-extrabold mb-2">
+      <Counter target={500} />+
+    </div>
+    <div className="text-lg opacity-90">Restaurants Partnered</div>
+  </div>
+
+  <div className="text-center">
+    <div className="flex justify-center mb-4">
+      <Users className="w-12 h-12" />
+    </div>
+    <div className="text-5xl font-extrabold mb-2">
+      <Counter target={50000} />+
+    </div>
+    <div className="text-lg opacity-90">Happy Diners</div>
+  </div>
+
+  <div className="text-center">
+    <div className="flex justify-center mb-4">
+      <MapPin className="w-12 h-12" />
+    </div>
+    <div className="text-5xl font-extrabold mb-2">
+      <Counter target={20} />+
+    </div>
+    <div className="text-lg opacity-90">Cities Covered</div>
+  </div>
+
+  <div className="text-center">
+    <div className="flex justify-center mb-4">
+      <Gift className="w-12 h-12" />
+    </div>
+    <div className="text-5xl font-extrabold mb-2">
+      <Counter target={10000} />+
+    </div>
+    <div className="text-lg opacity-90">Deals Redeemed</div>
+  </div>
+</div>
+
+      </div>
+    </section>
 
       {/* How It Works */}
       <section id="how-it-works" className="py-16 bg-white">
@@ -276,38 +302,56 @@ export default function BogoNinjaLanding() {
             <p className="text-gray-600 text-lg">Get started in just 4 simple steps</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-bogo-orange-lightTransparent rounded-full flex items-center justify-center mx-auto mb-6">
-                <Download className="w-8 h-8 text-bogo-orange-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4 ">Download & Sign Up</h3>
-              <p className="text-gray-600">Create your account in seconds and start exploring</p>
+          <div className="flex flex-col lg:flex-row justify-evenly items-center gap-12">
+            {/* Left: Steps */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-xl">
+              {[
+                {
+                  icon: <Download className="w-8 h-8 text-bogo-orange-600" />,
+                  title: "Download & Sign Up",
+                  desc: "Create your account in seconds and start exploring",
+                },
+                {
+                  icon: <MapPin className="w-8 h-8 text-bogo-orange-600" />,
+                  title: "Find Nearby Deals",
+                  desc: "Explore restaurants near you with live offers",
+                },
+                {
+                  icon: <Smartphone className="w-8 h-8 text-bogo-orange-600" />,
+                  title: "Grab a Coupon",
+                  desc: "Tap, save, and show at restaurant",
+                },
+                {
+                  icon: <Utensils className="w-8 h-8 text-bogo-orange-600" />,
+                  title: "Redeem & Dine",
+                  desc: "Enjoy discounts on your favorite meals",
+                },
+              ].map((step, index) => (
+                <div className="text-center" key={index}>
+                  <div className="w-16 h-16 bg-bogo-orange-lightTransparent rounded-full flex items-center justify-center mx-auto mb-6">
+                    {step.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
+                  <p className="text-gray-600">{step.desc}</p>
+                </div>
+              ))}
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-bogo-orange-lightTransparent rounded-full flex items-center justify-center mx-auto mb-6">
-                <MapPin className="w-8 h-8  text-bogo-orange-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Find Nearby Deals</h3>
-              <p className="text-gray-600">Explore restaurants near you with live offers</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-bogo-orange-lightTransparent rounded-full flex items-center justify-center mx-auto mb-6">
-                <Smartphone className="w-8 h-8  text-bogo-orange-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Grab a Coupon</h3>
-              <p className="text-gray-600">Tap, save, and show at restaurant</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-bogo-orange-lightTransparent rounded-full flex items-center justify-center mx-auto mb-6">
-                <Utensils className="w-8 h-8  text-bogo-orange-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Redeem & Dine</h3>
-              <p className="text-gray-600">Enjoy discounts on your favorite meals</p>
+
+            {/* Right: Image */}
+            <div className="flex justify-center items-center max-w-md">
+              <Image
+                src="/mobile_mokeup04.png"
+                alt="Using Bogo Ninja app"
+                width={400}
+                height={400}
+                // className="rounded-2xl shadow-xl"
+              />
             </div>
           </div>
         </div>
       </section>
+
+
 
       {/* Feature Highlights */}
       <section className="py-16 bg-gray-50">
@@ -318,44 +362,44 @@ export default function BogoNinjaLanding() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="p-6 hover:shadow-lg transition-shadow">
+            <Card className="p-6 hover:shadow-lg hover:bg-bogo-orange-50 transition-shadow ">
               <CardContent className="p-0">
-                <DollarSign className="w-12 h-12 text-bogo-dark-500 mb-4" />
+                <DollarSign className="w-12 h-12 text-bogo-orange-500 mb-4" />
                 <h3 className="text-xl font-semibold mb-3">Save Money Every Meal</h3>
                 <p className="text-gray-600">Big savings with zero cost to you</p>
               </CardContent>
             </Card>
-            <Card className="p-6 hover:shadow-lg transition-shadow">
+            <Card className="p-6 hover:shadow-lg hover:bg-bogo-orange-50 transition-shadow">
               <CardContent className="p-0">
                 <Smartphone className="w-12 h-12 text-bogo-orange-500 mb-4" />
                 <h3 className="text-xl font-semibold mb-3">Seamless App Experience</h3>
                 <p className="text-gray-600">Just tap, grab, and dine</p>
               </CardContent>
             </Card>
-            <Card className="p-6 hover:shadow-lg transition-shadow">
+            <Card className="p-6 hover:shadow-lg hover:bg-bogo-orange-50 transition-shadow">
               <CardContent className="p-0">
-                <MapPin className="w-12 h-12 text-blue-500 mb-4" />
+                <MapPin className="w-12 h-12 text-bogo-orange-500 mb-4" />
                 <h3 className="text-xl font-semibold mb-3">Local Offers</h3>
                 <p className="text-gray-600">Personalized deals near your current location</p>
               </CardContent>
             </Card>
-            <Card className="p-6 hover:shadow-lg transition-shadow">
+            <Card className="p-6 hover:shadow-lg hover:bg-bogo-orange-50 transition-shadow">
               <CardContent className="p-0">
-                <Clock className="w-12 h-12 text-purple-500 mb-4" />
+                <Clock className="w-12 h-12 text-bogo-orange-500 mb-4" />
                 <h3 className="text-xl font-semibold mb-3">Instant Redemption</h3>
                 <p className="text-gray-600">No waiting, no confusion</p>
               </CardContent>
             </Card>
-            <Card className="p-6 hover:shadow-lg transition-shadow">
+            <Card className="p-6 hover:shadow-lg  hover:bg-bogo-orange-50 transition-shadow">
               <CardContent className="p-0">
-                <CheckCircle className="w-12 h-12 text-bogo-dark-500 mb-4" />
+                <CheckCircle className="w-12 h-12 text-bogo-orange-500 mb-4" />
                 <h3 className="text-xl font-semibold mb-3">Free Forever</h3>
                 <p className="text-gray-600">No fees, no subscriptions</p>
               </CardContent>
             </Card>
-            <Card className="p-6 hover:shadow-lg transition-shadow">
+            <Card className="p-6 hover:shadow-lg  hover:bg-bogo-orange-50 transition-shadow">
               <CardContent className="p-0">
-                <Shield className="w-12 h-12 text-red-500 mb-4" />
+                <Shield className="w-12 h-12 text-bogo-orange-500 mb-4" />
                 <h3 className="text-xl font-semibold mb-3">Secure & Reliable</h3>
                 <p className="text-gray-600">Your data and transactions are always safe</p>
               </CardContent>
@@ -372,67 +416,78 @@ export default function BogoNinjaLanding() {
             <p className="text-gray-600 text-lg">Don't miss out on these amazing offers</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="flex flex-wrap justify-evenly gap-10">
             {[
               {
                 restaurant: "Pizza Palace",
                 deal: "Buy 1 Get 1 Free",
-                location: "Connaught Place",
+                location: "Los Angeles",
                 discount: "50% OFF",
+                logo: "/restro_logo01.png",
               },
               {
                 restaurant: "Burger Junction",
                 deal: "20% Off on All Combos",
-                location: "Karol Bagh",
+                location: "San Diego",
                 discount: "20% OFF",
+                logo: "/restro_logo02.png",
               },
               {
                 restaurant: "Spice Garden",
                 deal: "Free Dessert with Main Course",
-                location: "Lajpat Nagar",
+                location: "San Francisco",
                 discount: "FREE DESSERT",
+                logo: "/restro_logo03.png",
               },
               {
                 restaurant: "Coffee Corner",
                 deal: "Buy 2 Get 1 Free Coffee",
-                location: "Khan Market",
+                location: "Sacramento",
                 discount: "33% OFF",
+                logo: "/restro_logo04.png",
               },
-              { restaurant: "Taco Fiesta", deal: "30% Off on Weekdays", location: "Saket", discount: "30% OFF" },
+              {
+                restaurant: "Taco Fiesta",
+                deal: "30% Off on Weekdays",
+                location: "Fresno",
+                discount: "30% OFF",
+                logo: "/restro_logo05.png",
+              },
               {
                 restaurant: "Sushi Express",
                 deal: "15% Off + Free Delivery",
-                location: "Gurgaon",
+                location: "Oakland",
                 discount: "15% OFF",
+                logo: "/restro_logo06.png",
               },
             ].map((deal, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="relative">
-                  <Image
-                    src={`/placeholder.svg?height=200&width=400&query=${deal.restaurant} food`}
-                    alt={deal.restaurant}
-                    width={400}
-                    height={200}
-                    className="w-full h-48 object-cover"
-                  />
-                  <Badge className="absolute top-4 right-4 bg-red-500 text-white">{deal.discount}</Badge>
+              <div
+                key={index}
+                className="flex flex-col items-center justify-between"
+              >
+                <Image
+                  src={deal.logo}
+                  alt={deal.restaurant}
+                  width={100}
+                  height={80}
+                  className="mb-2 h-20 object-contain"
+                />
+                <h3 className="text-xl font-semibold text-center mb-1">{deal.restaurant}</h3>
+                <p className="text-sm text-gray-600 text-center mb-1">{deal.deal}</p>
+                <div className="flex items-center text-sm text-gray-500 mb-4">
+                  <MapPin className="w-4 h-4 mr-1" />
+                  {deal.location}
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{deal.restaurant}</h3>
-                  <p className="text-gray-600 mb-2">{deal.deal}</p>
-                  <div className="flex items-center text-sm text-gray-500 mb-4">
-                    <MapPin className="w-4 h-4 mr-1" />
-                    {deal.location}
-                  </div>
-                  <Button className="w-full bg-bogo-gradient-3 hover:from-bogo-orange-600 hover:to-bogo-dark-600">
-                    Grab Now
-                  </Button>
-                </CardContent>
-              </Card>
+                <Button className="w-40 mx-auto bg-bogo-gradient-3 hover:from-bogo-orange-600 hover:to-bogo-dark-600 transition-colors">
+                  Grab Now
+                </Button>
+
+              </div>
             ))}
           </div>
         </div>
       </section>
+
 
       {/* Testimonials */}
       <section className="py-16 bg-gray-50">
@@ -509,7 +564,7 @@ export default function BogoNinjaLanding() {
       </section>
 
       {/* Restaurant Partner Section */}
-      <section id="partners" className="py-16 bg-bogo-gradient-6 text-white">
+      <section id="partners" className="py-16  bg-bogo-dark-500 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Are You a Restaurant? Let's Grow Together.</h2>
@@ -590,14 +645,20 @@ export default function BogoNinjaLanding() {
                 Download the Bogo Ninja app and start discovering amazing deals near you
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button size="lg" className="bg-black text-white hover:bg-gray-800">
-                  <Download className="mr-2 w-5 h-5" />
-                  Download on App Store
-                </Button>
-                <Button size="lg" className="bg-bogo-dark-600 text-white hover:bg-bogo-dark-700">
-                  <Download className="mr-2 w-5 h-5" />
-                  Get it on Google Play
-                </Button>
+                <Image
+                src="/mobile_mokeup05.png"
+                alt="Using Bogo Ninja app"
+                width={200}
+                height={200}
+                // className="rounded-2xl shadow-xl"
+              />
+               <Image
+                src="/mobile_mokeup06.png"
+                alt="Using Bogo Ninja app"
+                width={200}
+                height={200}
+                // className="rounded-2xl shadow-xl"
+              />
               </div>
             </div>
             <div className="text-center lg:text-right">
@@ -605,7 +666,7 @@ export default function BogoNinjaLanding() {
               <p className="text-gray-600 mb-6 text-lg">Join our restaurant partner network and grow your business</p>
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-bogo-orange-500 to-bogo-dark-500 hover:from-bogo-orange-600 hover:to-bogo-dark-600 text-lg px-8 py-6"
+                className="bg-bogo-gradient-6 hover:bg-bogo-orange-600  text-lg px-8 py-6"
               >
                 Become a Partner
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -665,8 +726,13 @@ export default function BogoNinjaLanding() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-bogo-orange-500 to-bogo-dark-500 rounded-lg flex items-center justify-center">
-                  <Utensils className="w-5 h-5 text-white" />
+                <div className=" justify-center">
+                  <Image
+                    src="/logo.png"
+                    alt="logo"
+                    width={40}
+                    height={50}
+                  />
                 </div>
                 <span className="text-xl font-bold">Bogo Ninja</span>
               </div>
@@ -761,5 +827,5 @@ export default function BogoNinjaLanding() {
       </footer>
     </div>
   )
-  
+
 }
