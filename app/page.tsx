@@ -243,7 +243,7 @@ export default function BogoNinjaLanding() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Restaurants You Know & Love</h2>
             <p className="text-gray-600 text-lg">
-              Trusted by top dining destinations across India
+              Trusted by top dining destinations
             </p>
           </div>
 
@@ -279,7 +279,7 @@ export default function BogoNinjaLanding() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">
-              Join India's Fastest Growing Dining Deal Network
+              Join Fastest Growing Dining Deal Network
             </h2>
           </div>
 
@@ -760,12 +760,12 @@ export default function BogoNinjaLanding() {
               <div className="flex justify-center lg:justify-start gap-4 mt-4">
                 {/* App Store Button */}
                 <div className="bg-bogo-dark-500 rounded-lg px-3 py-1 flex items-center gap-2">
-                  <div className="w-25 h-25 rounded">
+                  <div className="w-30 h-30 rounded">
                     <Image
                       src="/app_store_logo.png"
                       alt="App Store"
-                      width={35}
-                      height={35}
+                      width={40}
+                      height={40}
                     />
                   </div>
                   <div className="text-left text-white leading-tight">
@@ -785,7 +785,7 @@ export default function BogoNinjaLanding() {
                     />
                   </div>
                   <div className="text-left text-white leading-tight">
-                    <div className="text-[10px]">GET IT ON</div>
+                    <div className="text-[10px]">Download on the</div>
                     <div className="text-xs font-semibold">Google Play</div>
                   </div>
                 </div>
@@ -922,14 +922,14 @@ export default function BogoNinjaLanding() {
             {/* Fifth Column: App Buttons */}
             <div className="flex flex-col gap-3">
               <div className="bg-bogo-dark-500 rounded-lg px-3 py-1 flex items-center gap-2 w-fit">
-                <div className="w-8 h-8 rounded">
-                  <Image
-                    src="/app_store_logo.png"
-                    alt="App Store"
-                    width={32}
-                    height={32}
-                  />
-                </div>
+                 <div className="w-30 h-30 rounded">
+                    <Image
+                      src="/app_store_logo.png"
+                      alt="App Store"
+                      width={40}
+                      height={40}
+                    />
+                  </div>
                 <div className="text-left text-white leading-tight">
                   <div className="text-[10px]">Download on the</div>
                   <div className="text-xs font-semibold">App Store</div>

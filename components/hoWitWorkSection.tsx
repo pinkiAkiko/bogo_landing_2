@@ -37,7 +37,7 @@ export default function HowItWorksSection({ steps }: { steps: Step[] }) {
       className="relative py-16 bg-white overflow-hidden"
     >
       {/* Subtle Floating Elements */}
-      <Image
+      {/* <Image
         src="/coupon1.png"
         alt="Floating 1"
         width={100}
@@ -57,7 +57,7 @@ export default function HowItWorksSection({ steps }: { steps: Step[] }) {
   width={140}
   height={140}
   className="absolute bottom-1/3 right-1/3 opacity-80 animate-[float_5s_ease-in-out_infinite]"
-/>
+/> */}
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-7">
