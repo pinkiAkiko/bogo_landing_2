@@ -48,7 +48,7 @@ export default function BogoNinjaLanding() {
     <div className="min-h-screen bg-gradient-to-br from-bogo-orange-50 to-bogo-dark-50">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-bogo-orange-100 z-50">
-        <div className="container mx-auto px-4 py-4">
+        <div className="container mx-auto px-2 py-2">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               {/* <div className="w-10 h-10 bg-gradient-to-r from-bogo-orange-500 to-bogo-dark-500 rounded-lg flex items-center justify-center">
@@ -57,8 +57,8 @@ export default function BogoNinjaLanding() {
               <Image
                 src="/logo.png"
                 alt="logo"
-                width={40}
-                height={60}
+                width={55}
+                height={70}
               />
               <span className="text-2xl font-bold bg-bogo-gradient-3 bg-clip-text text-transparent">
                 Bogo Ninja
@@ -807,8 +807,8 @@ export default function BogoNinjaLanding() {
                   <Image
                     src="/logo.png"
                     alt="logo"
-                    width={40}
-                    height={50}
+                    width={50}
+                    height={60}
                   />
                 </div>
                 <span className="text-xl font-bold">Bogo Ninja</span>
