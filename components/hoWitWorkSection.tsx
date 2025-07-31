@@ -2,46 +2,24 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { Download, MapPin, Smartphone, Utensils } from "lucide-react";
 
-const steps = [
-  {
-    icon: <Download className="w-8 h-8 text-bogo-orange-600" />,
-    title: "Download & Sign Up",
-    desc: "Create your account in seconds and start exploring",
-    image: "/step1.png",
-  },
-  {
-    icon: <MapPin className="w-8 h-8 text-bogo-orange-600" />,
-    title: "Find Nearby Deals",
-    desc: "Explore restaurants near you with live offers",
-    image: "/step2.png",
-  },
-  {
-    icon: <Smartphone className="w-8 h-8 text-bogo-orange-600" />,
-    title: "Grab a Coupon",
-    desc: "Tap, save, and show at restaurant",
-    image: "/step3.png",
-  },
-  {
-    icon: <Utensils className="w-8 h-8 text-bogo-orange-600" />,
-    title: "Redeem & Dine",
-    desc: "Enjoy discounts on your favorite meals",
-    image: "/step4.png",
-  },
-];
+// Type definition for step item
+type Step = {
+  icon: JSX.Element;
+  title: string;
+  desc: string;
+  image: string;
+};
 
-export default function HowItWorksSection() {
+export default function HowItWorksSection({ steps }: { steps: Step[] }) {
   const [currentStep, setCurrentStep] = useState(0);
 
-  // Auto-play steps every 2 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentStep((prev) => (prev + 1) % steps.length);
     }, 2000);
-
     return () => clearInterval(interval);
-  }, []);
+  }, [steps]);
 
   const handleStepClick = (index: number) => {
     setCurrentStep(index);
@@ -56,7 +34,6 @@ export default function HowItWorksSection() {
         </div>
 
         <div className="flex flex-col lg:flex-row justify-evenly items-center gap-12">
-          
           {/* Left: Steps */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-xl">
             {steps.map((step, index) => (

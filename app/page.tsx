@@ -44,6 +44,34 @@ export default function BogoNinjaLanding() {
     setMobileMenuOpen(false)
   }
 
+  const steps = [
+  {
+    icon: <Download className="w-8 h-8 text-bogo-orange-600" />,
+    title: "Download & Sign Up",
+    desc: "Create your account in seconds and start exploring",
+    image: "/step1.png",
+  },
+  {
+    icon: <MapPin className="w-8 h-8 text-bogo-orange-600" />,
+    title: "Find Nearby Deals",
+    desc: "Explore restaurants near you with live offers",
+    image: "/step2.png",
+  },
+  {
+    icon: <Smartphone className="w-8 h-8 text-bogo-orange-600" />,
+    title: "Grab a Coupon",
+    desc: "Tap, save, and show at restaurant",
+    image: "/step3.png",
+  },
+  {
+    icon: <Utensils className="w-8 h-8 text-bogo-orange-600" />,
+    title: "Redeem & Dine",
+    desc: "Enjoy discounts on your favorite meals",
+    image: "/step4.png",
+  },
+];
+
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-bogo-orange-50 to-bogo-dark-50">
@@ -303,7 +331,7 @@ export default function BogoNinjaLanding() {
       </section>
 
       {/* How It Works */}
-        <HowItWorksSection />
+        <HowItWorksSection steps={steps} />
       {/* <section id="how-it-works" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
