@@ -760,12 +760,12 @@ export default function BogoNinjaLanding() {
               <div className="flex justify-center lg:justify-start gap-4 mt-4">
                 {/* App Store Button */}
                 <div className="bg-bogo-dark-500 rounded-lg px-3 py-1 flex items-center gap-2">
-                  <div className="w-30 h-30 rounded">
+                  <div className="w-25 h-30 rounded">
                     <Image
                       src="/app_store_logo.png"
                       alt="App Store"
-                      width={40}
-                      height={40}
+                      width={32}
+                      height={30}
                     />
                   </div>
                   <div className="text-left text-white leading-tight">
@@ -922,12 +922,12 @@ export default function BogoNinjaLanding() {
             {/* Fifth Column: App Buttons */}
             <div className="flex flex-col gap-3">
               <div className="bg-bogo-dark-500 rounded-lg px-3 py-1 flex items-center gap-2 w-fit">
-                 <div className="w-30 h-30 rounded">
+                 <div className="w-25 h-30 rounded">
                     <Image
                       src="/app_store_logo.png"
                       alt="App Store"
-                      width={40}
-                      height={40}
+                      width={32}
+                      height={30}
                     />
                   </div>
                 <div className="text-left text-white leading-tight">
