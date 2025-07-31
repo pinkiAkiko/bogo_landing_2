@@ -45,33 +45,31 @@ export default function BogoNinjaLanding() {
   }
 
   const steps = [
-  {
-    icon: <Download className="w-8 h-8 text-bogo-orange-600" />,
-    title: "Download & Sign Up",
-    desc: "Create your account in seconds and start exploring",
-    image: "/step01.png",
-  },
-  {
-    icon: <MapPin className="w-8 h-8 text-bogo-orange-600" />,
-    title: "Find Nearby Deals",
-    desc: "Explore restaurants near you with live offers",
-    image: "/step02.png",
-  },
-  {
-    icon: <Smartphone className="w-8 h-8 text-bogo-orange-600" />,
-    title: "Grab a Coupon",
-    desc: "Tap, save, and show at restaurant",
-    image: "/step03.png",
-  },
-  {
-    icon: <Utensils className="w-8 h-8 text-bogo-orange-600" />,
-    title: "Redeem & Dine",
-    desc: "Enjoy discounts on your favorite meals",
-    image: "/step04.png",
-  },
-];
-
-
+    {
+      icon: <Download className="w-8 h-8 text-bogo-orange-600" />,
+      title: "Download & Sign Up",
+      desc: "Create your account in seconds and start exploring",
+      image: "/step01.png",
+    },
+    {
+      icon: <MapPin className="w-8 h-8 text-bogo-orange-600" />,
+      title: "Find Nearby Deals",
+      desc: "Explore restaurants near you with live offers",
+      image: "/step02.png",
+    },
+    {
+      icon: <Smartphone className="w-8 h-8 text-bogo-orange-600" />,
+      title: "Grab a Coupon",
+      desc: "Tap, save, and show at restaurant",
+      image: "/step03.png",
+    },
+    {
+      icon: <Utensils className="w-8 h-8 text-bogo-orange-600" />,
+      title: "Redeem & Dine",
+      desc: "Enjoy discounts on your favorite meals",
+      image: "/step04.png",
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-bogo-orange-50 to-bogo-dark-50">
@@ -225,10 +223,10 @@ export default function BogoNinjaLanding() {
             <div className="relative flex justify-center lg:justify-end">
               <div className="relative z-10">
                 <Image
-                  src="/mobile_mokeup03.png"
+                  src="/hero_mobile_mokeup.png"
                   alt="Happy diners using Bogo Ninja app"
-                  width={540}
-                  height={520}
+                  width={681}
+                  height={677}
                   className="mt-5"
                 />
               </div>
@@ -331,7 +329,7 @@ export default function BogoNinjaLanding() {
       </section>
 
       {/* How It Works */}
-        <HowItWorksSection steps={steps} />
+      <HowItWorksSection steps={steps} />
       {/* <section id="how-it-works" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -341,7 +339,7 @@ export default function BogoNinjaLanding() {
 
           <div className="flex flex-col lg:flex-row justify-evenly items-center gap-12">
             {/* Left: Steps */}
-            {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-xl">
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-xl">
               {[
                 {
                   icon: <Download className="w-8 h-8 text-bogo-orange-600" />,
@@ -374,8 +372,8 @@ export default function BogoNinjaLanding() {
               ))}
             </div> */}
 
-            {/* Right: Image */}
-            {/* <div className="flex justify-center items-center max-w-md">
+      {/* Right: Image */}
+      {/* <div className="flex justify-center items-center max-w-md">
               <Image
                 src="/mobile_mokeup04.png"
                 alt="Using Bogo Ninja app"
@@ -583,10 +581,10 @@ export default function BogoNinjaLanding() {
               <CardContent className="p-0">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-bogo-gradient-3 rounded-full flex items-center justify-center text-white font-semibold mr-4">
-                    SP
+                    A
                   </div>
                   <div>
-                    <h4 className="font-semibold">Sonal P.</h4>
+                    <h4 className="font-semibold">Alex</h4>
                     <div className="flex text-yellow-400">
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className="w-4 h-4 fill-current" />
@@ -603,10 +601,10 @@ export default function BogoNinjaLanding() {
               <CardContent className="p-0">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-bogo-gradient-3 rounded-full flex items-center justify-center text-white font-semibold mr-4">
-                    AM
+                    J
                   </div>
                   <div>
-                    <h4 className="font-semibold">Akshay M.</h4>
+                    <h4 className="font-semibold">John</h4>
                     <div className="flex text-yellow-400">
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className="w-4 h-4 fill-current" />
@@ -623,10 +621,10 @@ export default function BogoNinjaLanding() {
               <CardContent className="p-0">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-bogo-gradient-3 rounded-full flex items-center justify-center text-white font-semibold mr-4">
-                    AD
+                    S
                   </div>
                   <div>
-                    <h4 className="font-semibold">Anjali D.</h4>
+                    <h4 className="font-semibold">Steve</h4>
                     <div className="flex text-yellow-400">
                       {[...Array(4)].map((_, i) => (
                         <Star key={i} className="w-4 h-4 fill-current" />
@@ -760,38 +758,39 @@ export default function BogoNinjaLanding() {
 
               {/* Download Buttons */}
               <div className="flex justify-center lg:justify-start gap-4 mt-4">
-                {/* App Store Button Placeholder */}
-                <div className="bg-bogo-dark-500 rounded-lg px-4 py-2 flex items-center gap-3 ">
-                  <div className="w-10 h-10  rounded">
-                    <Image
-                      src="/play_store_logo.png"
-                      alt="App Store"
-                      width={50}
-                      height={50}
-                    />
-                  </div> {/* Apple icon placeholder */}
-                  <div className="text-left text-white leading-tight">
-                    <div className="text-xs">Download on the</div>
-                    <div className="text-sm font-semibold">App Store</div>
-                  </div>
-                </div>
-
-                {/* Google Play Button Placeholder */}
-                <div className="bg-bogo-dark-500 rounded-lg px-4 py-2 flex items-center gap-3 ">
-                  <div className="w-10 h-10 rounded">
+                {/* App Store Button */}
+                <div className="bg-bogo-dark-500 rounded-lg px-3 py-1 flex items-center gap-2">
+                  <div className="w-25 h-25 rounded">
                     <Image
                       src="/app_store_logo.png"
                       alt="App Store"
-                      width={70}
-                      height={70}
+                      width={35}
+                      height={35}
                     />
-                  </div> {/* Play icon placeholder */}
+                  </div>
                   <div className="text-left text-white leading-tight">
-                    <div className="text-xs">GET IT ON</div>
-                    <div className="text-sm font-semibold">Google Play</div>
+                    <div className="text-[10px]">Download on the</div>
+                    <div className="text-xs font-semibold">App Store</div>
+                  </div>
+                </div>
+
+                {/* Google Play Button */}
+                <div className="bg-bogo-dark-500 rounded-lg px-3 py-1 flex items-center gap-2">
+                  <div className="w-8 h-8 rounded">
+                    <Image
+                      src="/play_store_logo.png"
+                      alt="Google Play"
+                      width={32}
+                      height={32}
+                    />
+                  </div>
+                  <div className="text-left text-white leading-tight">
+                    <div className="text-[10px]">GET IT ON</div>
+                    <div className="text-xs font-semibold">Google Play</div>
                   </div>
                 </div>
               </div>
+
             </div>
 
             {/* Right QR/phone image */}
@@ -799,8 +798,8 @@ export default function BogoNinjaLanding() {
               <Image
                 src="/mobile_mokeup04.png"
                 alt="Using Bogo Ninja app"
-                width={350}
-                height={350}
+                width={349}
+                height={371}
                 className="z-10"
               />
 
@@ -868,66 +867,26 @@ export default function BogoNinjaLanding() {
       {/* Footer */}
       <footer className="bg-gray-900 text-white pt-12 pb-3">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-
-            {/* First Column: Wider (col-span-2) */}
+          <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
+            {/* First Column */}
             <div className="md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
-                <div className="justify-center">
-                  <Image src="/logo.png" alt="logo" width={50} height={60} />
-                </div>
+                <Image src="/logo.png" alt="logo" width={50} height={60} />
                 <span className="text-xl font-bold">Bogo Ninja</span>
               </div>
               <p className="text-gray-400 mb-4">
-                Your smartest dining companion for <br></br>
+                Your smartest dining companion for <br />
                 discovering amazing local deals.
               </p>
-
-              {/* Social Icons */}
               <div className="flex space-x-4 mb-6">
                 <Facebook className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer" />
                 <Instagram className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer" />
                 <Linkedin className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer" />
                 <Twitter className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer" />
               </div>
-
-              {/* App Download Buttons */}
-              <div className="flex flex-col sm:flex-row sm:justify-start gap-4 mt-2">
-                {/* App Store */}
-                <div className="bg-bogo-dark-500 rounded-lg px-4 py-2 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded">
-                    <Image
-                      src="/play_store_logo.png"
-                      alt="App Store"
-                      width={50}
-                      height={50}
-                    />
-                  </div>
-                  <div className="text-left text-white leading-tight">
-                    <div className="text-xs">Download on the</div>
-                    <div className="text-sm font-semibold">App Store</div>
-                  </div>
-                </div>
-
-                {/* Google Play */}
-                <div className="bg-bogo-dark-500 rounded-lg px-4 py-2 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded">
-                    <Image
-                      src="/app_store_logo.png"
-                      alt="Google Play"
-                      width={50}
-                      height={50}
-                    />
-                  </div>
-                  <div className="text-left text-white leading-tight">
-                    <div className="text-xs">GET IT ON</div>
-                    <div className="text-sm font-semibold">Google Play</div>
-                  </div>
-                </div>
-              </div>
             </div>
 
-            {/* Second Column: Company */}
+            {/* Second Column */}
             <div>
               <h4 className="font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-gray-400">
@@ -938,7 +897,7 @@ export default function BogoNinjaLanding() {
               </ul>
             </div>
 
-            {/* Third Column: Support */}
+            {/* Third Column */}
             <div>
               <h4 className="font-semibold mb-4">Support</h4>
               <ul className="space-y-2 text-gray-400">
@@ -949,7 +908,7 @@ export default function BogoNinjaLanding() {
               </ul>
             </div>
 
-            {/* Fourth Column: Legal */}
+            {/* Fourth Column */}
             <div>
               <h4 className="font-semibold mb-4">Legal</h4>
               <ul className="space-y-2 text-gray-400">
@@ -958,6 +917,39 @@ export default function BogoNinjaLanding() {
                 <li><Link href="#" className="hover:text-white">Cookie Policy</Link></li>
                 <li><Link href="#" className="hover:text-white">Refund Policy</Link></li>
               </ul>
+            </div>
+
+            {/* Fifth Column: App Buttons */}
+            <div className="flex flex-col gap-3">
+              <div className="bg-bogo-dark-500 rounded-lg px-3 py-1 flex items-center gap-2 w-fit">
+                <div className="w-8 h-8 rounded">
+                  <Image
+                    src="/app_store_logo.png"
+                    alt="App Store"
+                    width={32}
+                    height={32}
+                  />
+                </div>
+                <div className="text-left text-white leading-tight">
+                  <div className="text-[10px]">Download on the</div>
+                  <div className="text-xs font-semibold">App Store</div>
+                </div>
+              </div>
+
+              <div className="bg-bogo-dark-500 rounded-lg px-3 py-1 flex items-center gap-2 w-fit">
+                <div className="w-8 h-8 rounded">
+                  <Image
+                    src="/play_store_logo.png"
+                    alt="Google Play"
+                    width={32}
+                    height={32}
+                  />
+                </div>
+                <div className="text-left text-white leading-tight">
+                  <div className="text-[10px]">Download on the</div>
+                  <div className="text-xs font-semibold">Google Play</div>
+                </div>
+              </div>
             </div>
           </div>
 
