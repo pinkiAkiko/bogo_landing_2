@@ -165,7 +165,7 @@ export default function BogoNinjaLanding() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-bogo-orange-300 text-bogo-orange-600 hover:bg-bogo-orange-50 text-lg px-8 py-6 bg-transparent"
+                  className="border-bogo-dark-600 text-bogo-dark-600 hover:bg-bogo-orange-50 text-lg px-8 py-6 bg-transparent"
                   onClick={() => scrollToSection("partners")}
                 >
                   I'm a Restaurant
