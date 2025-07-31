@@ -248,7 +248,7 @@ export default function BogoNinjaLanding() {
       </section>
 
       {/* Social Proof Stats */}
-      <section className="py-16 bg-bogo-gradient-2 text-white">
+      <section className="py-16 bg-bogo-gradient-7 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">
@@ -620,31 +620,31 @@ export default function BogoNinjaLanding() {
         <Image
           src="/food01.png"
           alt="Floating plate"
-          width={250}
-          height={250}
-          className="absolute top-8 left-4 opacity-30 rotate-12 pointer-events-none"
+          width={280}
+          height={280}
+          className="absolute top-10 left-4 opacity-10 rotate-12 pointer-events-none"
         />
         <Image
           src="/food02.png"
           alt="Floating chef hat"
-          width={120}
-          height={120}
-          className="absolute bottom-12 right-8 opacity-20 animate-pulse pointer-events-none"
+          width={150}
+          height={150}
+          className="absolute bottom-2 right-8 opacity-10 pointer-events-none"
         />
         <Image
           src="/food04.png"
           alt="Floating burger"
-          width={200}
-          height={200}
-          className="absolute top-1/2 right-0 transform -translate-y-1/2 opacity-70 pointer-events-none"
+          width={300}
+          height={300}
+          className="absolute top-4/5 right-0 transform -translate-y-1/2 opacity-10 pointer-events-none"
         />
-        <Image
+        {/* <Image
           src="/sheffhat.png"
           alt="Floating burger"
           width={200}
           height={200}
-          className="absolute top-8 right-4 opacity-30 rotate-12 pointer-events-none"
-        />
+          className="absolute top-8 right-4 opacity-10 rotate-12 pointer-events-none"
+        /> */}
         {/* Main Content */}
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -717,15 +717,51 @@ export default function BogoNinjaLanding() {
         </div>
       </section>
       {/* Join Us CTA */}
-      <section id="download" className="relative py-0  text-white overflow-hidden">
+      <section id="download" className="relative py-0 text-white overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
+
             {/* Left text content */}
             <div className="text-center lg:text-left">
               <h3 className="text-4xl text-gray-900 font-bold mb-4">Start Saving Instantly</h3>
               <p className="text-gray-900 mb-6 text-lg">
                 Download the Bogo Ninja app and start discovering amazing deals near you.
               </p>
+
+              {/* Download Buttons */}
+              <div className="flex justify-center lg:justify-start gap-4 mt-4">
+                {/* App Store Button Placeholder */}
+                <div className="bg-bogo-dark-500 rounded-lg px-4 py-2 flex items-center gap-3 ">
+                  <div className="w-10 h-10  rounded">
+                    <Image
+                      src="/play_store_logo.png"
+                      alt="App Store"
+                      width={50}
+                      height={50}
+                    />
+                  </div> {/* Apple icon placeholder */}
+                  <div className="text-left text-white leading-tight">
+                    <div className="text-xs">Download on the</div>
+                    <div className="text-sm font-semibold">App Store</div>
+                  </div>
+                </div>
+
+                {/* Google Play Button Placeholder */}
+                <div className="bg-bogo-dark-500 rounded-lg px-4 py-2 flex items-center gap-3 ">
+                  <div className="w-10 h-10 rounded">
+                    <Image
+                      src="/app_store_logo.png"
+                      alt="App Store"
+                      width={70}
+                      height={70}
+                    />
+                  </div> {/* Play icon placeholder */}
+                  <div className="text-left text-white leading-tight">
+                    <div className="text-xs">GET IT ON</div>
+                    <div className="text-sm font-semibold">Google Play</div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Right QR/phone image */}
@@ -746,11 +782,13 @@ export default function BogoNinjaLanding() {
           </div>
         </div>
 
-        {/* Optional background floating graphics */}
+        {/* Background graphics placeholder */}
         <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none">
-          {/* Add animated or static food SVGs/PNGs here later */}
+          {/* Optional decorative graphics */}
         </div>
       </section>
+
+
 
 
       {/* FAQ */}
@@ -798,110 +836,109 @@ export default function BogoNinjaLanding() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className=" justify-center">
-                  <Image
-                    src="/logo.png"
-                    alt="logo"
-                    width={50}
-                    height={60}
-                  />
-                </div>
-                <span className="text-xl font-bold">Bogo Ninja</span>
-              </div>
-              <p className="text-gray-400 mb-4">Your smartest dining companion for discovering amazing local deals.</p>
-              <div className="flex space-x-4">
-                <Facebook className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer" />
-                <Instagram className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer" />
-                <Linkedin className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer" />
-                <Twitter className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer" />
-              </div>
+    <footer className="bg-gray-900 text-white pt-12 pb-3">
+  <div className="container mx-auto px-4">
+    <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+      
+      {/* First Column: Wider (col-span-2) */}
+      <div className="md:col-span-2">
+        <div className="flex items-center space-x-2 mb-4">
+          <div className="justify-center">
+            <Image src="/logo.png" alt="logo" width={50} height={60} />
+          </div>
+          <span className="text-xl font-bold">Bogo Ninja</span>
+        </div>
+        <p className="text-gray-400 mb-4">
+          Your smartest dining companion for <br></br>
+          discovering amazing local deals.
+        </p>
+
+        {/* Social Icons */}
+        <div className="flex space-x-4 mb-6">
+          <Facebook className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer" />
+          <Instagram className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer" />
+          <Linkedin className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer" />
+          <Twitter className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer" />
+        </div>
+
+        {/* App Download Buttons */}
+        <div className="flex flex-col sm:flex-row sm:justify-start gap-4 mt-2">
+          {/* App Store */}
+          <div className="bg-bogo-dark-500 rounded-lg px-4 py-2 flex items-center gap-3">
+            <div className="w-10 h-10 rounded">
+              <Image
+                src="/play_store_logo.png"
+                alt="App Store"
+                width={50}
+                height={50}
+              />
             </div>
-            <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Contact
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Careers
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Press
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Support</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    FAQ
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Help Center
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Restaurant Login
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Partner Support
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Legal</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Terms of Service
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Cookie Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Refund Policy
-                  </Link>
-                </li>
-              </ul>
+            <div className="text-left text-white leading-tight">
+              <div className="text-xs">Download on the</div>
+              <div className="text-sm font-semibold">App Store</div>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 Bogo Ninja. All rights reserved.</p>
+
+          {/* Google Play */}
+          <div className="bg-bogo-dark-500 rounded-lg px-4 py-2 flex items-center gap-3">
+            <div className="w-10 h-10 rounded">
+              <Image
+                src="/app_store_logo.png"
+                alt="Google Play"
+                width={50}
+                height={50}
+              />
+            </div>
+            <div className="text-left text-white leading-tight">
+              <div className="text-xs">GET IT ON</div>
+              <div className="text-sm font-semibold">Google Play</div>
+            </div>
           </div>
         </div>
-      </footer>
+      </div>
+
+      {/* Second Column: Company */}
+      <div>
+        <h4 className="font-semibold mb-4">Company</h4>
+        <ul className="space-y-2 text-gray-400">
+          <li><Link href="#" className="hover:text-white">About Us</Link></li>
+          <li><Link href="#" className="hover:text-white">Contact</Link></li>
+          <li><Link href="#" className="hover:text-white">Careers</Link></li>
+          <li><Link href="#" className="hover:text-white">Press</Link></li>
+        </ul>
+      </div>
+
+      {/* Third Column: Support */}
+      <div>
+        <h4 className="font-semibold mb-4">Support</h4>
+        <ul className="space-y-2 text-gray-400">
+          <li><Link href="#" className="hover:text-white">FAQ</Link></li>
+          <li><Link href="#" className="hover:text-white">Help Center</Link></li>
+          <li><Link href="#" className="hover:text-white">Restaurant Login</Link></li>
+          <li><Link href="#" className="hover:text-white">Partner Support</Link></li>
+        </ul>
+      </div>
+
+      {/* Fourth Column: Legal */}
+      <div>
+        <h4 className="font-semibold mb-4">Legal</h4>
+        <ul className="space-y-2 text-gray-400">
+          <li><Link href="#" className="hover:text-white">Privacy Policy</Link></li>
+          <li><Link href="#" className="hover:text-white">Terms of Service</Link></li>
+          <li><Link href="#" className="hover:text-white">Cookie Policy</Link></li>
+          <li><Link href="#" className="hover:text-white">Refund Policy</Link></li>
+        </ul>
+      </div>
+    </div>
+
+    {/* Bottom Footer */}
+    <div className="border-t border-gray-800 mt-8 pt-5 text-center text-gray-400">
+      <p>&copy; 2025 Bogo Ninja. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
     </div>
   )
 

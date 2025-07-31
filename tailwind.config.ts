@@ -98,7 +98,8 @@ const config: Config = {
           "bogo-gradient-4": "linear-gradient(90deg, hsla(14, 89%, 46%, 1) 0%, hsla(37, 89%, 52%, 1) 100%)",
           "bogo-gradient-3":"linear-gradient(90deg, hsla(14, 89%, 46%, 1) 0%, hsla(26, 100%, 50%, 1) 72%, hsla(27, 100%, 45%, 1) 100%)",
           "bogo-gradient-5":"linear-gradient(90deg, hsla(4, 100%, 54%, 1) 0%, hsla(29, 86%, 52%, 1) 100%)",
-          "bogo-gradient-6": "linear-gradient(90deg, hsla(26, 100%, 15%, 1) 0%, hsla(14, 83%, 42%, 1) 0%, hsla(29, 100%, 52%, 1) 100%)"
+          "bogo-gradient-6": "linear-gradient(90deg, hsla(26, 100%, 15%, 1) 0%, hsla(14, 83%, 42%, 1) 0%, hsla(29, 100%, 52%, 1) 100%)",
+          "bogo-gradient-7":"linear-gradient(90deg, hsla(23, 100%, 50%, 1) 0%, hsla(34, 100%, 50%, 1) 49%, hsla(23, 100%, 50%, 1) 100%)"
       },
 
       borderRadius: {
