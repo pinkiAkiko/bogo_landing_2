@@ -42,7 +42,7 @@ export default function BogoNinjaLanding() {
     }
     setMobileMenuOpen(false)
   }
-  
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-bogo-orange-50 to-bogo-dark-50">
@@ -174,19 +174,22 @@ export default function BogoNinjaLanding() {
 
               {/* Badges */}
               <div className="flex flex-wrap justify-center lg:justify-start gap-4">
-                <Badge className="bg-green-100 text-green-800 px-4 py-2 text-sm">
-                  <CheckCircle className="w-4 h-4 mr-2" />
+                <div className="relative px-4 py-2 text-sm text-green-800 rounded-full shadow-md bg-gradient-to-tr from-green-100 via-white to-green-200 border border-green-300">
+                  <CheckCircle className="w-4 h-4 mr-2 inline" />
                   100% Free for Customers
-                </Badge>
-                <Badge className="bg-bogo-orange-100 text-bogo-orange-800 px-4 py-2 text-sm">
-                  <CheckCircle className="w-4 h-4 mr-2" />
+                </div>
+
+                <div className="relative px-4 py-2 text-sm text-bogo-orange-800 rounded-full shadow-md bg-gradient-to-tr from-orange-100 via-white to-orange-200 border border-orange-300">
+                  <CheckCircle className="w-4 h-4 mr-2 inline" />
                   No Hidden Charges
-                </Badge>
-                <Badge className="bg-blue-100 text-blue-800 px-4 py-2 text-sm">
-                  <CheckCircle className="w-4 h-4 mr-2" />
+                </div>
+
+                <div className="relative px-4 py-2 text-sm text-blue-800 rounded-full shadow-md bg-gradient-to-tr from-blue-100 via-white to-blue-200 border border-blue-300">
+                  <CheckCircle className="w-4 h-4 mr-2 inline" />
                   Redeem Instantly
-                </Badge>
+                </div>
               </div>
+
             </div>
 
             {/* Right Image Section */}
@@ -208,95 +211,95 @@ export default function BogoNinjaLanding() {
       </section>
 
       {/* Restaurant Partners */}
-    <section className="py-16 bg-white">
-  <div className="container mx-auto px-4">
-    <div className="text-center mb-12">
-      <h2 className="text-4xl font-bold mb-4">Restaurants You Know & Love</h2>
-      <p className="text-gray-600 text-lg">
-        Trusted by top dining destinations across India
-      </p>
-    </div>
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Restaurants You Know & Love</h2>
+            <p className="text-gray-600 text-lg">
+              Trusted by top dining destinations across India
+            </p>
+          </div>
 
-    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
-      {[1, 2, 3, 4, 5, 6].map((i) => (
-        <div
-          key={i}
-          className="flex items-center justify-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors h-[150px]"
-        >
-          <div className="h-[100px] w-full flex items-center justify-center">
-            <Image
-              src={`/logotype2_0${i}.png`}
-              alt={`Restaurant Partner ${i}`}
-              width={140}
-              height={0}
-              className="object-contain h-full"
-            />
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <div
+                key={i}
+                className="flex items-center justify-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors h-[150px]"
+              >
+                <div className="h-[100px] w-full flex items-center justify-center">
+                  <Image
+                    src={`/logotype2_0${i}.png`}
+                    alt={`Restaurant Partner ${i}`}
+                    width={140}
+                    height={0}
+                    className="object-contain h-full"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-8">
+            <Button variant="outline" onClick={() => scrollToSection("partners")}>
+              Want your restaurant featured here? Partner With Us
+            </Button>
           </div>
         </div>
-      ))}
-    </div>
-
-    <div className="text-center mt-8">
-      <Button variant="outline" onClick={() => scrollToSection("partners")}>
-        Want your restaurant featured here? Partner With Us
-      </Button>
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* Social Proof Stats */}
-      <section className="py-16 bg-bogo-orange-500 text-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">
-            Join India's Fastest Growing Dining Deal Network
-          </h2>
+      <section className="py-16 bg-bogo-gradient-2 text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">
+              Join India's Fastest Growing Dining Deal Network
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="flex justify-center mb-4">
+                <Utensils className="w-12 h-12" />
+              </div>
+              <div className="text-5xl font-extrabold mb-2">
+                <Counter target={500} />+
+              </div>
+              <div className="text-lg opacity-90">Restaurants Partnered</div>
+            </div>
+
+            <div className="text-center">
+              <div className="flex justify-center mb-4">
+                <Users className="w-12 h-12" />
+              </div>
+              <div className="text-5xl font-extrabold mb-2">
+                <Counter target={50000} />+
+              </div>
+              <div className="text-lg opacity-90">Happy Diners</div>
+            </div>
+
+            <div className="text-center">
+              <div className="flex justify-center mb-4">
+                <MapPin className="w-12 h-12" />
+              </div>
+              <div className="text-5xl font-extrabold mb-2">
+                <Counter target={20} />+
+              </div>
+              <div className="text-lg opacity-90">Cities Covered</div>
+            </div>
+
+            <div className="text-center">
+              <div className="flex justify-center mb-4">
+                <Gift className="w-12 h-12" />
+              </div>
+              <div className="text-5xl font-extrabold mb-2">
+                <Counter target={10000} />+
+              </div>
+              <div className="text-lg opacity-90">Deals Redeemed</div>
+            </div>
+          </div>
+
         </div>
-
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-  <div className="text-center">
-    <div className="flex justify-center mb-4">
-      <Utensils className="w-12 h-12" />
-    </div>
-    <div className="text-5xl font-extrabold mb-2">
-      <Counter target={500} />+
-    </div>
-    <div className="text-lg opacity-90">Restaurants Partnered</div>
-  </div>
-
-  <div className="text-center">
-    <div className="flex justify-center mb-4">
-      <Users className="w-12 h-12" />
-    </div>
-    <div className="text-5xl font-extrabold mb-2">
-      <Counter target={50000} />+
-    </div>
-    <div className="text-lg opacity-90">Happy Diners</div>
-  </div>
-
-  <div className="text-center">
-    <div className="flex justify-center mb-4">
-      <MapPin className="w-12 h-12" />
-    </div>
-    <div className="text-5xl font-extrabold mb-2">
-      <Counter target={20} />+
-    </div>
-    <div className="text-lg opacity-90">Cities Covered</div>
-  </div>
-
-  <div className="text-center">
-    <div className="flex justify-center mb-4">
-      <Gift className="w-12 h-12" />
-    </div>
-    <div className="text-5xl font-extrabold mb-2">
-      <Counter target={10000} />+
-    </div>
-    <div className="text-lg opacity-90">Deals Redeemed</div>
-  </div>
-</div>
-
-      </div>
-    </section>
+      </section>
 
       {/* How It Works */}
       {/* <section id="how-it-works" className="py-16 bg-white">
@@ -308,7 +311,7 @@ export default function BogoNinjaLanding() {
 
           <div className="flex flex-col lg:flex-row justify-evenly items-center gap-12">
             {/* Left: Steps */}
-            {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-xl">
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-xl">
               {[
                 {
                   icon: <Download className="w-8 h-8 text-bogo-orange-600" />,
@@ -342,7 +345,7 @@ export default function BogoNinjaLanding() {
             </div>
 
             {/* Right: Image */}
-            {/* <div className="flex justify-center items-center max-w-md">
+      {/* <div className="flex justify-center items-center max-w-md">
               <Image
                 src="/mobile_mokeup04.png"
                 alt="Using Bogo Ninja app"
@@ -353,50 +356,50 @@ export default function BogoNinjaLanding() {
             </div>
           </div>
         </div>
-      </section> */} 
+      </section> */}
 
 
       <section id="how-it-works" className="py-16 bg-white">
-  <div className="container mx-auto px-4">
-    <div className="text-center mb-16">
-      <h2 className="text-4xl font-bold mb-4">How Bogo Ninja Works</h2>
-      <p className="text-gray-600 text-lg">Get started in just 4 simple steps</p>
-    </div>
-
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-      {[
-        {
-          icon: <Download className="w-8 h-8 text-bogo-orange-600" />,
-          title: "Download & Sign Up",
-          desc: "Create your account in seconds and start exploring",
-        },
-        {
-          icon: <MapPin className="w-8 h-8 text-bogo-orange-600" />,
-          title: "Find Nearby Deals",
-          desc: "Explore restaurants near you with live offers",
-        },
-        {
-          icon: <Smartphone className="w-8 h-8 text-bogo-orange-600" />,
-          title: "Grab a Coupon",
-          desc: "Tap, save, and show at restaurant",
-        },
-        {
-          icon: <Utensils className="w-8 h-8 text-bogo-orange-600" />,
-          title: "Redeem & Dine",
-          desc: "Enjoy discounts on your favorite meals",
-        },
-      ].map((step, index) => (
-        <div key={index}>
-          <div className="w-16 h-16 bg-bogo-orange-lightTransparent rounded-full flex items-center justify-center mx-auto mb-6">
-            {step.icon}
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">How Bogo Ninja Works</h2>
+            <p className="text-gray-600 text-lg">Get started in just 4 simple steps</p>
           </div>
-          <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
-          <p className="text-gray-600">{step.desc}</p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            {[
+              {
+                icon: <Download className="w-8 h-8 text-bogo-orange-600" />,
+                title: "Download & Sign Up",
+                desc: "Create your account in seconds and start exploring",
+              },
+              {
+                icon: <MapPin className="w-8 h-8 text-bogo-orange-600" />,
+                title: "Find Nearby Deals",
+                desc: "Explore restaurants near you with live offers",
+              },
+              {
+                icon: <Smartphone className="w-8 h-8 text-bogo-orange-600" />,
+                title: "Grab a Coupon",
+                desc: "Tap, save, and show at restaurant",
+              },
+              {
+                icon: <Utensils className="w-8 h-8 text-bogo-orange-600" />,
+                title: "Redeem & Dine",
+                desc: "Enjoy discounts on your favorite meals",
+              },
+            ].map((step, index) => (
+              <div key={index}>
+                <div className="w-16 h-16 bg-bogo-orange-lightTransparent rounded-full flex items-center justify-center mx-auto mb-6">
+                  {step.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
+                <p className="text-gray-600">{step.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
 
 
@@ -527,7 +530,7 @@ export default function BogoNinjaLanding() {
                     <MapPin className="w-4 h-4 mr-1" />
                     {deal.location}
                   </div>
-                <Button className="w-full mx-auto bg-bogo-gradient-3 hover:from-bogo-orange-600 hover:to-bogo-dark-600 transition-colors">
+                  <Button className="w-full mx-auto bg-bogo-gradient-3 hover:from-bogo-orange-600 hover:to-bogo-dark-600 transition-colors">
                     Grab Now
                   </Button>
                 </CardContent>
@@ -612,7 +615,37 @@ export default function BogoNinjaLanding() {
       </section>
 
       {/* Restaurant Partner Section */}
-      <section id="partners" className="py-16  bg-bogo-dark-500 text-white">
+      <section id="partners" className="relative py-16 bg-bogo-dark-500 text-white overflow-hidden">
+        {/* Floating Images */}
+        <Image
+          src="/food01.png"
+          alt="Floating plate"
+          width={250}
+          height={250}
+          className="absolute top-8 left-4 opacity-30 rotate-12 pointer-events-none"
+        />
+        <Image
+          src="/food02.png"
+          alt="Floating chef hat"
+          width={120}
+          height={120}
+          className="absolute bottom-12 right-8 opacity-20 animate-pulse pointer-events-none"
+        />
+        <Image
+          src="/food04.png"
+          alt="Floating burger"
+          width={200}
+          height={200}
+          className="absolute top-1/2 right-0 transform -translate-y-1/2 opacity-70 pointer-events-none"
+        />
+        <Image
+          src="/sheffhat.png"
+          alt="Floating burger"
+          width={200}
+          height={200}
+          className="absolute top-8 right-4 opacity-30 rotate-12 pointer-events-none"
+        />
+        {/* Main Content */}
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Are You a Restaurant? Let's Grow Together.</h2>
@@ -674,6 +707,7 @@ export default function BogoNinjaLanding() {
             </div>
           </div>
 
+          {/* CTA Button */}
           <div className="text-center">
             <Button size="lg" className="bg-white text-bogo-dark-600 hover:bg-gray-100 text-lg px-8 py-6">
               Become a Partner – Start for Free
@@ -682,42 +716,41 @@ export default function BogoNinjaLanding() {
           </div>
         </div>
       </section>
-
       {/* Join Us CTA */}
-     <section id="download" className="relative py-0  text-white overflow-hidden">
-  <div className="container mx-auto px-4 relative z-10">
-    <div className="grid lg:grid-cols-2 gap-12 items-center">
-      {/* Left text content */}
-      <div className="text-center lg:text-left">
-        <h3 className="text-4xl text-gray-900 font-bold mb-4">Start Saving Instantly</h3>
-        <p className="text-gray-900 mb-6 text-lg">
-          Download the Bogo Ninja app and start discovering amazing deals near you.
-        </p>
-      </div>
+      <section id="download" className="relative py-0  text-white overflow-hidden">
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left text content */}
+            <div className="text-center lg:text-left">
+              <h3 className="text-4xl text-gray-900 font-bold mb-4">Start Saving Instantly</h3>
+              <p className="text-gray-900 mb-6 text-lg">
+                Download the Bogo Ninja app and start discovering amazing deals near you.
+              </p>
+            </div>
 
-      {/* Right QR/phone image */}
-      <div className="relative flex justify-center lg:justify-end">
-        <Image
-          src="/mobile_mokeup04.png"
-          alt="Using Bogo Ninja app"
-          width={350}
-          height={350}
-          className="z-10"
-        />
+            {/* Right QR/phone image */}
+            <div className="relative flex justify-center lg:justify-end">
+              <Image
+                src="/mobile_mokeup04.png"
+                alt="Using Bogo Ninja app"
+                width={350}
+                height={350}
+                className="z-10"
+              />
 
-        {/* Floating food elements - placeholder divs or use actual Image if available */}
-        <div className="absolute -top-6 -left-6 w-16 h-16 bg-orange-500 rounded-full opacity-70"></div>
-        <div className="absolute bottom-0 left-12 w-20 h-20 bg-yellow-400 rounded-full opacity-70"></div>
-        <div className="absolute -top-4 right-8 w-16 h-16 bg-red-500 rounded-full opacity-70"></div>
-      </div>
-    </div>
-  </div>
+              {/* Floating food elements - placeholder divs or use actual Image if available */}
+              <div className="absolute -top-6 -left-6 w-16 h-16 bg-orange-500 rounded-full opacity-70"></div>
+              <div className="absolute bottom-0 left-12 w-20 h-20 bg-yellow-400 rounded-full opacity-70"></div>
+              <div className="absolute -top-4 right-8 w-16 h-16 bg-red-500 rounded-full opacity-70"></div>
+            </div>
+          </div>
+        </div>
 
-  {/* Optional background floating graphics */}
-  <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none">
-    {/* Add animated or static food SVGs/PNGs here later */}
-  </div>
-</section>
+        {/* Optional background floating graphics */}
+        <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none">
+          {/* Add animated or static food SVGs/PNGs here later */}
+        </div>
+      </section>
 
 
       {/* FAQ */}
