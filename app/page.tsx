@@ -49,25 +49,25 @@ export default function BogoNinjaLanding() {
       icon: <Download className="w-8 h-8 text-bogo-orange-600" />,
       title: "Download & Sign Up",
       desc: "Create your account in seconds and start exploring",
-      image: "/step1.svg",
+      image: "/step01.svg",
     },
     {
       icon: <MapPin className="w-8 h-8 text-bogo-orange-600" />,
       title: "Find Nearby Deals",
       desc: "Explore restaurants near you with live offers",
-      image: "/step2.svg",
+      image: "/step02.svg",
     },
     {
       icon: <Smartphone className="w-8 h-8 text-bogo-orange-600" />,
       title: "Grab a Coupon",
       desc: "Tap, save, and show at restaurant",
-      image: "/step3.svg",
+      image: "/step03.svg",
     },
     {
       icon: <Utensils className="w-8 h-8 text-bogo-orange-600" />,
       title: "Redeem & Dine",
       desc: "Enjoy discounts on your favorite meals",
-      image: "/step4.svg",
+      image: "/step04.svg",
     },
   ];
 
