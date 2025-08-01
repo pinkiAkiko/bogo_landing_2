@@ -678,7 +678,7 @@ export default function BogoNinjaLanding() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Are You a Restaurant? Let's Grow Together.</h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Get discovered by thousands of nearby diners — without spending a rupee. Bogo Ninja helps you increase
+              Get discovered by thousands of nearby diners — without spending a money. Bogo Ninja helps you increase
               footfall, promote offers in real time, and grow your brand presence — all while keeping things simple and
               free.
             </p>
