@@ -31,7 +31,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 import Counter from "../components/counter";
-import HowItWorksSection from "../components/hoWitWorkSection";
+import HowItWorksSection from "../components/howItWorkSection";
 
 export default function BogoNinjaLanding() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -49,25 +49,25 @@ export default function BogoNinjaLanding() {
       icon: <Download className="w-8 h-8 text-bogo-orange-600" />,
       title: "Download & Sign Up",
       desc: "Create your account in seconds and start exploring",
-      image: "/step01.png",
+      image: "/step1.svg",
     },
     {
       icon: <MapPin className="w-8 h-8 text-bogo-orange-600" />,
       title: "Find Nearby Deals",
       desc: "Explore restaurants near you with live offers",
-      image: "/step02.png",
+      image: "/step2.svg",
     },
     {
       icon: <Smartphone className="w-8 h-8 text-bogo-orange-600" />,
       title: "Grab a Coupon",
       desc: "Tap, save, and show at restaurant",
-      image: "/step03.png",
+      image: "/step3.svg",
     },
     {
       icon: <Utensils className="w-8 h-8 text-bogo-orange-600" />,
       title: "Redeem & Dine",
       desc: "Enjoy discounts on your favorite meals",
-      image: "/step04.png",
+      image: "/step4.svg",
     },
   ];
 
@@ -223,7 +223,7 @@ export default function BogoNinjaLanding() {
             <div className="relative flex justify-center lg:justify-end">
               <div className="relative z-10">
                 <Image
-                  src="/hero_mobile_mokeup.png"
+                  src="/hero_mobile_mokeup.svg"
                   alt="Happy diners using Bogo Ninja app"
                   width={681}
                   height={677}
@@ -558,9 +558,12 @@ export default function BogoNinjaLanding() {
                     <MapPin className="w-4 h-4 mr-1" />
                     {deal.location}
                   </div>
-                  <Button className="w-full mx-auto bg-bogo-gradient-3 hover:from-bogo-orange-600 hover:to-bogo-dark-600 transition-colors">
+                  <Button
+                    className="w-full mx-auto border-2 border-bogo-orange-500 text-bogo-orange-600 bg-transparent hover:from-bogo-orange-600 hover:to-bogo-dark-600 hover: bg-bogo-gradient-3-r hover:text-white transition-colors"
+                  >
                     Grab Now
                   </Button>
+
                 </CardContent>
               </Card>
             ))}
@@ -922,14 +925,14 @@ export default function BogoNinjaLanding() {
             {/* Fifth Column: App Buttons */}
             <div className="flex flex-col gap-3">
               <div className="bg-bogo-dark-500 rounded-lg px-3 py-1 flex items-center gap-2 w-fit">
-                 <div className="w-25 h-30 rounded">
-                    <Image
-                      src="/app_store_logo.png"
-                      alt="App Store"
-                      width={32}
-                      height={30}
-                    />
-                  </div>
+                <div className="w-25 h-30 rounded">
+                  <Image
+                    src="/app_store_logo.png"
+                    alt="App Store"
+                    width={32}
+                    height={30}
+                  />
+                </div>
                 <div className="text-left text-white leading-tight">
                   <div className="text-[10px]">Download on the</div>
                   <div className="text-xs font-semibold">App Store</div>

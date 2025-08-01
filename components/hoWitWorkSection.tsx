@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { ChevronLeft, ChevronRight } from "lucide-react"; // ✨ New
 
 type Step = {
   icon: JSX.Element;
@@ -24,41 +25,21 @@ export default function HowItWorksSection({ steps }: { steps: Step[] }) {
     return () => clearInterval(interval);
   }, [hovering, steps.length]);
 
-  const handleStepClick = (index: number) => {
-    setCurrentStep(index);
-  };
-
+  const handleStepClick = (index: number) => setCurrentStep(index);
   const handleMouseEnter = () => setHovering(true);
   const handleMouseLeave = () => setHovering(false);
+
+  const goToPrevious = () =>
+    setCurrentStep((prev) => (prev - 1 + steps.length) % steps.length);
+
+  const goToNext = () =>
+    setCurrentStep((prev) => (prev + 1) % steps.length);
 
   return (
     <section
       id="how-it-works"
       className="relative py-16 bg-white overflow-hidden"
     >
-      {/* Subtle Floating Elements */}
-      {/* <Image
-        src="/coupon1.png"
-        alt="Floating 1"
-        width={100}
-        height={100}
-        className="absolute top-10 left-6 opacity-90 animate-[float_6s_ease-in-out_infinite]"
-      />
-      <Image
-        src="/coupon2.png"
-        alt="Floating 2"
-        width={100}
-        height={100}
-        className="absolute right-6 top-1/3 opacity-70 animate-[float_7s_ease-in-out_infinite]"
-      />
-     <Image
-  src="/coupon4.png"
-  alt="Floating 3"
-  width={140}
-  height={140}
-  className="absolute bottom-1/3 right-1/3 opacity-80 animate-[float_5s_ease-in-out_infinite]"
-/> */}
-
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-7">
           <h2 className="text-4xl font-bold mb-4">How Bogo Ninja Works</h2>
@@ -72,8 +53,8 @@ export default function HowItWorksSection({ steps }: { steps: Step[] }) {
               <div
                 key={index}
                 className={`text-center cursor-pointer transition-all duration-300 p-4 rounded-lg border ${index === currentStep
-                  ? "bg-bogo-orange-50 border-bogo-orange-500 shadow-md"
-                  : "border-transparent"
+                    ? "bg-bogo-orange-50 border-bogo-orange-500 shadow-md"
+                    : "border-transparent"
                   }`}
                 onClick={() => handleStepClick(index)}
                 onMouseEnter={handleMouseEnter}
@@ -88,23 +69,39 @@ export default function HowItWorksSection({ steps }: { steps: Step[] }) {
             ))}
           </div>
 
-          {/* Right: Step Image */}
+          {/* Right: Step Image + Arrows */}
           <div
-            className="flex justify-center items-center max-w-md"
+            className="relative flex justify-center items-center max-w-md"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
+            {/* Left Arrow */}
+            <button
+              onClick={goToPrevious}
+              className="absolute -left-12 p-2 bg-white border rounded-full shadow hover:bg-gray-100"
+            >
+              <ChevronLeft className="w-6 h-6 text-gray-600" />
+            </button>
+
+            {/* Step Image */}
             <Image
               src={steps[currentStep].image}
               alt={steps[currentStep].title}
               width={320}
               height={340}
-              className="transition-opacity duration-500"
+              className="transition-opacity duration-500 mx-8"
             />
+
+            {/* Right Arrow */}
+            <button
+              onClick={goToNext}
+              className="absolute -right-12 p-2 bg-white border rounded-full shadow hover:bg-gray-100"
+            >
+              <ChevronRight className="w-6 h-6 text-gray-600" />
+            </button>
           </div>
         </div>
       </div>
     </section>
-
   );
 }
