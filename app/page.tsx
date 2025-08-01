@@ -31,7 +31,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 import Counter from "../components/counter";
-import HowItWorksSection from "../components/howItWorkSection";
+import HowItWorksSection from "../components//howItWorkSection";
 
 export default function BogoNinjaLanding() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
