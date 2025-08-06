@@ -9,6 +9,33 @@
 }
 
 @layer base {
+    html {
+    font-size: 100%; /* default = 16px */
+  }
+
+  @media (max-width: 1024px) {
+    html {
+      font-size: 95%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    html {
+      font-size: 90%;
+    }
+  }
+
+  @media (max-width: 640px) {
+    html {
+      font-size: 85%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    html {
+      font-size: 75%;
+    }
+  }
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
@@ -87,4 +114,12 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
