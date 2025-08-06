@@ -15,25 +15,25 @@
 
   @media (max-width: 1024px) {
     html {
-      font-size: 95%;
+      font-size: 100%;
     }
   }
 
   @media (max-width: 768px) {
     html {
-      font-size: 90%;
+      font-size: 95%;
     }
   }
 
   @media (max-width: 640px) {
     html {
-      font-size: 85%;
+      font-size: 90%;
     }
   }
 
   @media (max-width: 480px) {
     html {
-      font-size: 75%;
+      font-size: 87%;
     }
   }
   :root {

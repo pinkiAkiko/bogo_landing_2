@@ -30,12 +30,66 @@ import {
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
+import { useEffect, useRef} from "react";
 import Counter from "../components/counter";
 import HowItWorksSection from "../components/howItWorksSection";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+const feedbacks = [
+  {
+    name: "Alex",
+    initial: "A",
+    text: "I've saved hundreds eating out — Bogo Ninja makes it guilt-free to dine out often!",
+    rating: 5,
+  },
+  {
+    name: "John",
+    initial: "J",
+    text: "Simple, easy, and free. I always check Bogo Ninja before eating out.",
+    rating: 5,
+  },
+  {
+    name: "Steve",
+    initial: "S",
+    text: "Great offers from restaurants I already visit. No gimmicks, just real savings.",
+    rating: 4,
+  },
+  {
+    name: "Emma",
+    initial: "E",
+    text: "Fantastic experience! Deals are always legit and easy to redeem.",
+    rating: 5,
+  },
+  {
+    name: "Liam",
+    initial: "L",
+    text: "Saved a lot while discovering new places in my city. Love it!",
+    rating: 4,
+  },
+];
+
+
 export default function BogoNinjaLanding() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+   const scrollRef = useRef<HTMLDivElement>(null);
+  const [showArrows, setShowArrows] = useState(false);
+
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (container && container.scrollWidth > container.clientWidth) {
+      setShowArrows(true);
+    }
+  }, []);
+
+  const scrollByAmount = 260;
+
+  const scrollLeft = () => {
+    scrollRef.current?.scrollBy({ left: -scrollByAmount, behavior: "smooth" });
+  };
+
+  const scrollRight = () => {
+    scrollRef.current?.scrollBy({ left: scrollByAmount, behavior: "smooth" });
+  };
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -44,6 +98,8 @@ export default function BogoNinjaLanding() {
     }
     setMobileMenuOpen(false)
   }
+
+  
 
   const steps = [
     {
@@ -708,78 +764,71 @@ export default function BogoNinjaLanding() {
 
 
       {/* Testimonials */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Why Diners Love Bogo Ninja</h2>
-            <p className="text-gray-600 text-lg">Real stories from our happy customers</p>
+     <section className="py-16 bg-white relative overflow-hidden">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4">Why Diners Love Bogo Ninja</h2>
+          <p className="text-gray-600 text-lg">Real stories from our happy customers</p>
+        </div>
+
+        <div className="relative">
+          {/* === Left Arrow === */}
+          {showArrows && (
+            <button
+              onClick={scrollLeft}
+              className="hidden md:flex absolute -left-14 top-1/2 -translate-y-1/2 z-10 bg-white border shadow p-3 rounded-full hover:bg-gray-100"
+            >
+              &#8592;
+            </button>
+          )}
+
+          {/* === Scrollable Cards === */}
+          <div
+            ref={scrollRef}
+            className="flex overflow-x-auto scroll-smooth gap-4 px-1 snap-x snap-mandatory scrollbar-hide"
+          >
+            {feedbacks.map((f, index) => (
+              <Card
+                key={index}
+                className="min-w-[240px] max-w-[300px] snap-start shrink-0 p-4 hover:shadow-md"
+              >
+                <CardContent className="p-0">
+                  <div className="flex items-center mb-4">
+                    <div className="w-10 h-10 bg-bogo-gradient-3 rounded-full flex items-center justify-center text-white font-semibold mr-3">
+                      {f.initial}
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-sm">{f.name}</h4>
+                      <div className="flex text-yellow-400">
+                        {[...Array(5)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className={`w-3.5 h-3.5 fill-current ${
+                              i < f.rating ? "" : "text-gray-300"
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-gray-600 italic text-sm line-clamp-5">"{f.text}"</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="p-6">
-              <CardContent className="p-0">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-bogo-gradient-3 rounded-full flex items-center justify-center text-white font-semibold mr-4">
-                    A
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">Alex</h4>
-                    <div className="flex text-yellow-400">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-current" />
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                <p className="text-gray-600 italic">
-                  "I've saved hundreds eating out — Bogo Ninja makes it guilt-free to dine out often!"
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="p-6">
-              <CardContent className="p-0">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-bogo-gradient-3 rounded-full flex items-center justify-center text-white font-semibold mr-4">
-                    J
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">John</h4>
-                    <div className="flex text-yellow-400">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-current" />
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                <p className="text-gray-600 italic">
-                  "Simple, easy, and free. I always check Bogo Ninja before eating out."
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="p-6">
-              <CardContent className="p-0">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-bogo-gradient-3 rounded-full flex items-center justify-center text-white font-semibold mr-4">
-                    S
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">Steve</h4>
-                    <div className="flex text-yellow-400">
-                      {[...Array(4)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-current" />
-                      ))}
-                      <Star className="w-4 h-4 text-gray-300" />
-                    </div>
-                  </div>
-                </div>
-                <p className="text-gray-600 italic">
-                  "Great offers from restaurants I already visit. No gimmicks, just real savings."
-                </p>
-              </CardContent>
-            </Card>
-          </div>
+          {/* === Right Arrow === */}
+          {showArrows && (
+            <button
+              onClick={scrollRight}
+              className="hidden md:flex absolute -right-8 top-1/2 -translate-y-1/2 z-10 bg-white border shadow p-3 rounded-full hover:bg-gray-100"
+            >
+              &#8594;
+            </button>
+          )}
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Restaurant Partner Section */}
       <section id="partners" className="relative py-16 bg-bogo-dark-500 text-white overflow-hidden">
@@ -1035,7 +1084,7 @@ export default function BogoNinjaLanding() {
               {/* Company */}
              <div className="w-[32%] md:w-auto mb-6 md:mb-0">
                 <h4 className="font-semibold mb-2 text-sm md:text-base">Company</h4>
-                <ul className="space-y-1 text-gray-400 text-xs md:text-sm">
+                <ul className="space-y-1 text-gray-400 text-sm md:text-base">
                   <li><Link href="#" className="hover:text-white">About Us</Link></li>
                   <li><Link href="#" className="hover:text-white">Contact</Link></li>
                   <li><Link href="#" className="hover:text-white">Careers</Link></li>
@@ -1046,7 +1095,7 @@ export default function BogoNinjaLanding() {
               {/* Support */}
               <div className="w-[32%] md:w-auto mb-6 md:mb-0">
                 <h4 className="font-semibold mb-2 text-sm md:text-base">Support</h4>
-                <ul className="space-y-1 text-gray-400 text-xs md:text-sm">
+                <ul className="space-y-1 text-gray-400 text-sm md:text-base">
                   <li><Link href="#" className="hover:text-white">FAQ</Link></li>
                   <li><Link href="#" className="hover:text-white">Help Center</Link></li>
                   <li><Link href="#" className="hover:text-white">Restaurant Login</Link></li>
@@ -1057,7 +1106,7 @@ export default function BogoNinjaLanding() {
               {/* Legal */}
               <div className="w-[32%] md:w-auto mb-6 md:mb-0">
                 <h4 className="font-semibold mb-2 text-sm md:text-base">Legal</h4>
-                <ul className="space-y-1 text-gray-400 text-xs md:text-sm">
+                <ul className="space-y-1 text-gray-400 text-sm md:text-base">
                   <li><Link href="#" className="hover:text-white">Privacy Policy</Link></li>
                   <li><Link href="#" className="hover:text-white">Terms of Service</Link></li>
                   <li><Link href="#" className="hover:text-white">Cookie Policy</Link></li>
