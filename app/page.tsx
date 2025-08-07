@@ -234,7 +234,7 @@ export default function BogoNinjaLanding() {
                   . Eat More, Pay Less.
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  Discover coupons and exclusive discounts from restaurants near you — 100% free, forever!
+                  Discover coupons and exclusive discounts from restaurants near you — 100% free onboarding, forever!
                 </p>
               </div>
 
@@ -867,7 +867,7 @@ export default function BogoNinjaLanding() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Are You a Restaurant? Let's Grow Together.</h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Get discovered by thousands of nearby diners — without spending a money. Bogo Ninja helps you increase
+              Get discovered by thousands of nearby diners — without spending a doller. Bogo Ninja helps you increase
               footfall, promote offers in real time, and grow your brand presence — all while keeping things simple and
               free.
             </p>
@@ -1022,9 +1022,9 @@ export default function BogoNinjaLanding() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
-                <AccordionTrigger className="text-left">How do I redeem a deal?</AccordionTrigger>
+                <AccordionTrigger className="text-left">How do I redeem a deal/coupon?</AccordionTrigger>
                 <AccordionContent>
-                  Just grab the deal from the app and show the code at the restaurant. It's that simple!
+                  Search for deals near your location in the application, then go to the store and redeem using Easy Scan.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
@@ -1034,7 +1034,7 @@ export default function BogoNinjaLanding() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4">
-                <AccordionTrigger className="text-left">Are deals city-specific?</AccordionTrigger>
+                <AccordionTrigger className="text-left">Are deals location-specific?</AccordionTrigger>
                 <AccordionContent>
                   Yes, we show you deals based on your location to ensure you get the most relevant offers.
                 </AccordionContent>
