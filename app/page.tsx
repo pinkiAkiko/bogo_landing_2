@@ -220,21 +220,20 @@ export default function BogoNinjaLanding() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 sm:pt-36 lg:pt-24 pb-16 px-4">
+    <section className="pt-24 pb-16 px-4">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-6 lg:gap-y-0 lg:gap-x-12 items-center">
-
-            {/* Text Section */}
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
             <div className="space-y-8 text-center lg:text-left">
               <div className="space-y-4">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+                <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
                   Grab Exciting{" "}
                   <span className="bg-bogo-gradient-3 bg-clip-text text-transparent">
                     Local Deals
                   </span>
                   . Eat More, Pay Less.
                 </h1>
-                <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                <p className="text-xl text-gray-600 leading-relaxed">
                   Discover coupons and exclusive discounts from restaurants near you — 100% free, forever!
                 </p>
               </div>
@@ -243,7 +242,7 @@ export default function BogoNinjaLanding() {
               <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
                 <Button
                   size="lg"
-                  className="bg-bogo-gradient-3 hover:from-bogo-orange-600 hover:to-bogo-dark-600 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6"
+                  className="bg-bogo-gradient-3 hover:from-bogo-orange-600 hover:to-bogo-dark-600 text-lg px-8 py-6"
                   onClick={() => scrollToSection("deals")}
                 >
                   Browse Top Deals
@@ -252,45 +251,47 @@ export default function BogoNinjaLanding() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-bogo-dark-600 text-bogo-dark-600 hover:bg-bogo-orange-50 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 bg-transparent"
+                  className="border-bogo-dark-600 text-bogo-dark-600 hover:bg-bogo-orange-50 text-lg px-8 py-6 bg-transparent"
                   onClick={() => scrollToSection("partners")}
                 >
                   I'm a Restaurant
                 </Button>
               </div>
 
-              {/* Info Badges */}
-              <div className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4">
+              {/* Badges */}
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4">
                 <div className="relative px-4 py-2 text-sm text-green-800 rounded-full shadow-md bg-gradient-to-tr from-green-100 via-white to-green-200 border border-green-300">
                   <CheckCircle className="w-4 h-4 mr-2 inline" />
                   100% Free for Customers
                 </div>
+
                 <div className="relative px-4 py-2 text-sm text-bogo-orange-800 rounded-full shadow-md bg-gradient-to-tr from-orange-100 via-white to-orange-200 border border-orange-300">
                   <CheckCircle className="w-4 h-4 mr-2 inline" />
                   No Hidden Charges
                 </div>
+
                 <div className="relative px-4 py-2 text-sm text-blue-800 rounded-full shadow-md bg-gradient-to-tr from-blue-100 via-white to-blue-200 border border-blue-300">
                   <CheckCircle className="w-4 h-4 mr-2 inline" />
                   Redeem Instantly
                 </div>
               </div>
+
             </div>
 
-            {/* Hero Image */}
+            {/* Right Image Section */}
             <div className="relative flex justify-center lg:justify-end">
-              <div className="relative z-10 w-[85%] sm:w-3/4 md:w-2/3 lg:w-full">
+              <div className="relative z-10">
                 <Image
                   src="/hero_mobile_mokeup.svg"
                   alt="Happy diners using Bogo Ninja app"
                   width={681}
                   height={677}
-                  className="w-full h-auto"
+                  className="mt-5"
                 />
               </div>
-              <div className="absolute -top-4 -right-2 w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 bg-bogo-gradient-6 rounded-full opacity-20 animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-6 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-bogo-gradient-6 rounded-full opacity-20 animate-pulse delay-1000"></div>
+              <div className="absolute -top-4 -right-2 w-32 h-32 bg-bogo-gradient-6 rounded-full opacity-20 animate-pulse"></div>
+              <div className="absolute -bottom-4 -left-9 w-24 h-24 bg-bogo-gradient-6 rounded-full opacity-20 animate-pulse delay-1000"></div>
             </div>
-
           </div>
         </div>
       </section>
@@ -831,7 +832,8 @@ export default function BogoNinjaLanding() {
     </section>
 
       {/* Restaurant Partner Section */}
-      <section id="partners" className="relative py-16 bg-bogo-dark-500 text-white overflow-hidden">
+     <section id="partners" className="relative py-16 bg-bogo-dark-500 text-white overflow-hidden">
+        {/* Floating Images */}
         <Image
           src="/food01.png"
           alt="Floating plate"
@@ -874,7 +876,7 @@ export default function BogoNinjaLanding() {
           {/* Launch Offer */}
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-12">
             <h3 className="text-2xl font-bold mb-6 text-center">🔥 Launch Offer: Early Bird Benefits</h3>
-            <div className="flex gap-4 overflow-x-auto no-scrollbar md:grid md:grid-cols-3">
+            <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center">
                 <Gift className="w-12 h-12 mx-auto mb-4" />
                 <h4 className="font-semibold mb-2">Zero Redemption Charges</h4>
@@ -896,13 +898,11 @@ export default function BogoNinjaLanding() {
           {/* Why Partner */}
           <div className="mb-12">
             <h3 className="text-3xl font-bold mb-8 text-center">📈 Why Partner With Bogo Ninja?</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center">
                 <TrendingUp className="w-12 h-12 mx-auto mb-4" />
                 <h4 className="font-semibold mb-2">Post & Manage Deals Easily</h4>
-                <p className="opacity-90 text-sm">
-                  Intuitive partner dashboard to create and control your own offers
-                </p>
+                <p className="opacity-90 text-sm">Intuitive partner dashboard to create and control your own offers</p>
               </div>
               <div className="text-center">
                 <BarChart3 className="w-12 h-12 mx-auto mb-4" />
@@ -914,21 +914,15 @@ export default function BogoNinjaLanding() {
               <div className="text-center">
                 <Shield className="w-12 h-12 mx-auto mb-4" />
                 <h4 className="font-semibold mb-2">Fast & Secure KYC Process</h4>
-                <p className="opacity-90 text-sm">
-                  Onboard in minutes with simple documentation
-                </p>
+                <p className="opacity-90 text-sm">Onboard in minutes with simple documentation</p>
               </div>
               <div className="text-center">
                 <Megaphone className="w-12 h-12 mx-auto mb-4" />
                 <h4 className="font-semibold mb-2">Free Exposure to Nearby Diners</h4>
-                <p className="opacity-90 text-sm">
-                  Tap into our fast-growing network of active food lovers
-                </p>
+                <p className="opacity-90 text-sm">Tap into our fast-growing network of active food lovers</p>
               </div>
             </div>
           </div>
-
-
 
           {/* CTA Button */}
           <div className="text-center">
@@ -939,7 +933,6 @@ export default function BogoNinjaLanding() {
           </div>
         </div>
       </section>
-
       {/* Join Us CTA */}
       <section id="download" className="relative py-0 text-white overflow-hidden">
         <div className="container mx-auto px-4 relative z-10 mt-12 md:mt-0">
